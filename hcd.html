@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 06: Human Centered Design</title>
+    <script src="./js/theme-init.js"></script>
+    <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/project.css" rel="stylesheet">
+    <link rel="icon" href="./images/favicon.png">
+</head>
+
+<body>
+    <div class="panel">
+
+        <div class="panel-header">
+            <div class="tab">
+                <span>Project 06: Human Centered Design</span>
+            </div>
+            <a href="werelden.html" class="panel-close">&#10005;</a>
+        </div>
+
+        <div class="scroll-wrap">
+            <main>
+
+                <h1>Human Centered Design</h1>
+
+                <section>
+                    <h2>Project omschrijving</h2>
+                    <p>Voor Human Centered Design heb ik een webprototype gebouwd voor Ihab, een blinde gebruiker die dagelijks met een screenreader werkt. Het idee: een popup met drie tabs (Quick Scan, Detail en Sfeer) waarmee hij razendsnel kan horen wat de essentie van een webpagina is, welke links en afbeeldingen er staan, en wat de sfeer of stemming van de pagina is. Alles via de Web Speech API.</p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/selavanvreeswijk/humancentereddesign" target="_blank">
+                            <button class="btn">GitHub</button>
+                        </a>
+                        <a href="https://selavanvreeswijk.github.io/humancentereddesign/" target="_blank">
+                            <button class="btn">Website</button>
+                        </a>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Plannen, ontwikkelingen en reflecties</h2>
+                    <p>Ik begon met een simpeler idee: een knop die de sfeer van een pagina detecteert via sleutelwoorden en de screenreaderstem aanpast. Maar na de eerste test met Ihab bleek dat hij dat niet zo nuttig vond: hij had meer behoefte aan een samenvatting van wat er op een pagina staat. Dat was een belangrijke omslag: niet bouwen wat ik zelf cool vind, maar wat hij écht mist.</p>
+                    <p>Daarna heb ik een popup gebouwd via een <code>&lt;dialog&gt;</code> element met <code>showModal()</code> zodat de focus automatisch goed zit voor de screenreader. De Quick Scan leest meteen voor wanneer de popup opent, geen extra klik nodig. Ihab kan ook een stem kiezen, en ik heb dubbele stemmen (Frank en Alva die dezelfde onderliggende stem gebruiken) gefilterd zodat hij echt een keuze heeft.</p>
+                    <p>Ik heb meerdere testronden gedaan. Elke keer kwamen er nieuwe punten uit: het kruisje had geen label, emoji's voor knoppen werken verwarrend, Quick Scan en Detail konden samengevoegd worden. Die feedback direct doorvoeren was leerzaam, maar ook soms frustrerend: je denkt dat iets klopt totdat je het test.</p>
+                </section>
+
+                <section>
+                    <h2>Afbeeldingen</h2>
+                    <div class="img-grid">
+                        <figure>
+                            <img src="./images/thumbnail-hcd.png" alt="Thumbnail Human Centered Design">
+                            <figcaption>Het prototype met de drie-tabs popup</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Uitkomsten en inzichten</h2>
+                    <p>Dit project heeft me het meeste geleerd over hoe je voor een specifiek persoon ontwerpt. De Exclusive Design Principles van Vasilis van Gemert (Study Situation, Ignore Conventions, Prioritise Identity en Add Nonsense) gaven een goed kader. Ik heb geleerd hoe de Web Speech API werkt, hoe je focus management regelt in een dialoogvenster, en hoe groot het verschil is tussen wat jij als ontwerper bedenkt en wat een gebruiker écht nodig heeft.</p>
+                    <p>De Sfeer-tab is mijn favoriete toevoeging: niet strikt functioneel, maar precies het soort nuance dat een standaard screenreader nooit biedt. Dat kleine stukje plezier toevoegen voor recreatief gebruik vond ik het meest voldoeninggevend van dit hele project.</p>
+                </section>
+
+            </main>
+            <div class="scrollbar"></div>
+        </div>
+
+        <div class="panel-nav">
+            <a href="api.html">
+                <button class="btn">&#8592; Vorig project</button>
+            </a>
+            <a href="weeklynerd.html">
+                <button class="btn">Volgend project &#8594;</button>
+            </a>
+        </div>
+
+    </div>
+
+    <script src="./js/project.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 05: API</title>
+    <script src="./js/theme-init.js"></script>
+    <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/project.css" rel="stylesheet">
+    <link rel="icon" href="./images/favicon.png">
+</head>
+
+<body>
+    <div class="panel">
+
+        <div class="panel-header">
+            <div class="tab">
+                <span>Project 05: API</span>
+            </div>
+            <a href="werelden.html" class="panel-close">&#10005;</a>
+        </div>
+
+        <div class="scroll-wrap">
+            <main>
+
+                <h1>API</h1>
+
+                <section>
+                    <h2>Project omschrijving</h2>
+                    <p>Voor het API vak heb ik een Sudoku-app gebouwd die gebruik maakt van twee APIs: de Sudoku API voor de puzzels zelf, en de icanhazdadjoke API voor een grap wanneer je een puzzel oplost. De moeilijkheidsgraad past zich automatisch aan op basis van hoe lang je doet over een puzzel. Afgeronde puzzels en statistieken worden bijgehouden via localStorage.</p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/selavanvreeswijk/api" target="_blank">
+                            <button class="btn">GitHub</button>
+                        </a>
+                        <a href="https://sudoku-68ij.onrender.com/" target="_blank">
+                            <button class="btn">Website</button>
+                        </a>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Plannen, ontwikkelingen en reflecties</h2>
+                    <p>Ik ben week voor week nieuwe dingen gaan toevoegen. Eerst de basis: een sudoku ophalen en weergeven. Daarna Drag &amp; Drop toevoegen zodat je cijfers vanuit een zijpaneel naar het bord kunt slepen in plaats van typen. Dat was technisch het lastigste onderdeel: de Drag &amp; Drop API heeft nogal wat edges en ik moest goed nadenken over de interactie op zowel desktop als mobiel (touch events).</p>
+                    <p>De tijdsmeting werd de basis voor het adaptieve moeilijkheidssysteem: los je snel op, dan krijg je een moeilijkere puzzel de volgende keer. Ik heb ook een overzichtspagina gebouwd met statistieken over opgeloste puzzels per moeilijkheidsgraad, bijgehouden via localStorage. En als je klaar bent, regent het confetti en krijg je ook nog een dad joke.</p>
+                    <p>Het weekjournaal bijhouden hielp me echt om bij te houden wat ik wilde bereiken. Soms nam ik me iets voor wat te groot bleek voor die week, maar zo leerde ik ook beter inschatten wat haalbaar is.</p>
+                </section>
+
+                <section>
+                    <h2>Afbeeldingen</h2>
+                    <div class="img-grid">
+                        <figure>
+                            <img src="./images/thumbnail-api.png" alt="Thumbnail API project">
+                            <figcaption>De Sudoku-app met drag &amp; drop interface</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Uitkomsten en inzichten</h2>
+                    <p>Dit project leerde me hoe je twee APIs combineert en hoe je localStorage slim inzet voor persistente data zonder een backend. De Drag &amp; Drop API was een echte uitdaging maar ook heel bevredigend om te laten werken. Het adaptieve moeilijkheidssysteem vond ik een leuke touch, want het maakt de app iets persoonlijker voor de gebruiker.</p>
+                    <p>Ik heb ook gemerkt dat een weekjournaal bijhouden je helpt om gestructureerd te werken en terug te blikken op wat je hebt geleerd. Dat neem ik mee naar volgende projecten.</p>
+                </section>
+
+            </main>
+            <div class="scrollbar"></div>
+        </div>
+
+        <div class="panel-nav">
+            <a href="hackaton.html">
+                <button class="btn">&#8592; Vorig project</button>
+            </a>
+            <a href="hcd.html">
+                <button class="btn">Volgend project &#8594;</button>
+            </a>
+        </div>
+
+    </div>
+
+    <script src="./js/project.js"></script>
+</body>
+</html>

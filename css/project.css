@@ -1,0 +1,233 @@
+/* --------------------------------------------------------------------------------- MARK: LAYOUT
+*/
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Buitenste container */
+.panel{
+    display: flex;
+    flex-direction: column;
+
+    width: 60vw;
+    height: 80vh;
+
+    background: var(--panel-bg);
+    color: var(--white);
+}
+
+/* --------------------------------------------------------------------------------- MARK: TAB HEADER (transparant - zweeft in de lucht)
+*/
+
+.panel-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: calc(var(--scale) * 0.6) calc(var(--scale) * 0.8);
+
+    .tab{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        /* Geen achtergrond, geen border - zweeft over de achtergrond */
+        img{
+            display: none;
+        }
+
+        span{
+            font-family: 'Minecraft Heading', sans-serif;
+            font-size: calc(var(--scale) * 1.6);
+            color: var(--white);
+
+            text-shadow:
+                2px 2px 0px var(--gray),
+                4px 4px 0px var(--dark-gray);
+        }
+    }
+
+    /* Sluit knop rechts (kruisje) */
+    .panel-close{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: auto;
+        font-family: 'Minecraft Text', sans-serif;
+        font-size: calc(var(--scale) * 1.2);
+        color: var(--white);
+        padding: calc(var(--scale) * 0.4) calc(var(--scale) * 0.8);
+
+        background: var(--gray);
+
+        border-top:    var(--border) var(--btn-border-light);
+        border-left:   var(--border) var(--btn-border-light);
+        border-right:  var(--border) var(--btn-border-dark);
+        border-bottom: var(--border) var(--btn-border-dark);
+    }
+
+    .panel-close:hover{
+        background: var(--btn-hover-bg);
+        border-top-color:    var(--btn-hover-light);
+        border-left-color:   var(--btn-hover-light);
+        border-right-color:  var(--btn-hover-dark);
+        border-bottom-color: var(--btn-hover-dark);
+    }
+}
+
+/* --------------------------------------------------------------------------------- MARK: SCROLLBAAR CONTENT
+*/
+
+/* Wrapper zodat de scrollbar buiten de scrollbare main staat */
+.scroll-wrap{
+    flex: 1;
+    min-height: 0;
+    position: relative;
+}
+
+/* Scrollbar staat als sibling van main in .scroll-wrap */
+.scrollbar{
+    position: absolute;
+    right: 2px;
+    top: 2px;
+
+    width: calc(var(--scale) * 3.5);
+    height: calc(var(--scale) * 4);
+    background: url("../images/spider.png") no-repeat center / contain;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.scrollbar.visible{
+    opacity: 1;
+}
+
+main{
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    padding: calc(var(--scale) * 1.5);
+
+    /* Project titel in Minecraft Heading stijl */
+    h1{
+        font-family: 'Minecraft Heading', sans-serif;
+        font-size: calc(var(--scale) * 2.8);
+        color: var(--white);
+        text-align: center;
+
+        text-shadow:
+            2px 2px 0px var(--gray),
+            4px 4px 0px var(--dark-gray);
+
+        margin-bottom: calc(var(--scale) * 2);
+        padding-bottom: calc(var(--scale) * 1);
+    }
+
+    section{
+        margin-bottom: calc(var(--scale) * 2.5);
+
+        h2{
+            font-family: 'Minecraft Text', sans-serif;
+            font-size: calc(var(--scale) * 1.4);
+            color: var(--white);
+            margin-bottom: calc(var(--scale) * 0.8);
+            padding-bottom: calc(var(--scale) * 0.4);
+
+            border-bottom: 3px solid var(--gray);
+        }
+
+        p{
+            color: var(--light-gray);
+            line-height: 1.8;
+        }
+
+        p + p{
+            margin-top: calc(var(--scale) * 0.9);
+        }
+
+        code{
+            font-family: 'Minecraft Text', sans-serif;
+            font-size: inherit;
+            color: var(--white);
+            background: rgba(0, 0, 0, 0.35);
+            padding: 0 0.25em;
+        }
+    }
+
+    /* GitHub en website links */
+    .project-links{
+        display: flex;
+        flex-direction: row;
+        gap: calc(var(--scale) * 0.8);
+        margin-top: calc(var(--scale) * 1);
+
+        a{
+            width: auto;
+
+            button{
+                padding: calc(var(--scale) * 0.7) calc(var(--scale) * 1.5);
+                font-size: calc(var(--scale) * 1);
+            }
+        }
+    }
+
+    /* Afbeeldingen grid */
+    .img-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: calc(var(--scale) * 1);
+        margin-top: calc(var(--scale) * 0.8);
+
+        figure{
+            display: flex;
+            flex-direction: column;
+            gap: calc(var(--scale) * 0.3);
+        }
+
+        img{
+            width: 100%;
+            image-rendering: pixelated;
+            border: 3px solid var(--gray);
+        }
+
+        figcaption{
+            font-family: 'Minecraft Text', sans-serif;
+            font-size: calc(var(--scale) * 0.9);
+            color: var(--subtekst);
+            text-align: center;
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------- MARK: NAVIGATIE KNOPPEN
+*/
+
+.panel-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: calc(var(--scale) * 0.8);
+    padding: calc(var(--scale) * 0.8);
+
+    background: rgba(0, 0, 0, 0.3);
+
+    a{
+        width: auto;
+
+        button{
+            padding: calc(var(--scale) * 0.85) calc(var(--scale) * 1.5);
+        }
+    }
+}

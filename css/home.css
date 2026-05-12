@@ -5,8 +5,6 @@ body{
     align-items: center;
     text-align: center;
 
-    /* animation: backgroundScale 10s linear infinite; */
-
     h1,h2{
         font-family: 'Minecraft Heading', sans-serif;
     }
@@ -80,14 +78,26 @@ body{
     }
 }
 
-/* @keyframes backgroundScale{
+/* --------------------------------------------------------------------------------- MARK: SKIN + BOUNCE ANIMATIE
+*/
 
-    0%, 100%{
-        transform: scale(0);
+@keyframes bounceRotate {
+    0%, 100% {
+        transform: rotate(8deg) translateY(0);
     }
-
-    50%{
-        transform: scale(1);
+    50% {
+        transform: rotate(8deg) translateY(-20px);
     }
+}
 
-} */
+/* Skin staat rechts van de knoppen */
+.sela-bounce{
+    position: absolute;
+    right: 5vw;
+    bottom: 15%;
+
+    width: calc(var(--scale) * 9);
+    image-rendering: pixelated;
+
+    animation: bounceRotate 1.5s ease-in-out infinite;
+}

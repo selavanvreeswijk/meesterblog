@@ -17,7 +17,7 @@
     src: url('../fonts/minecraft.ttf') format('truetype');
 }
 
-/* --------------------------------------------------------------------------------- MARK: BODY
+/* --------------------------------------------------------------------------------- MARK: THEMA VARIABELEN
 */
 
 :root{
@@ -31,32 +31,54 @@
     --white: white;
     --subtekst: #aaaaaa;
 
+    /* Achtergrond & panelen */
+    --bg-image: url('../images/background.png');
+    --panel-bg: rgba(0, 0, 0, 0.75);
+
+    /* Knop kleuren */
+    --btn-border-light: #c8c8c8;
+    --btn-border-dark: #4a4a4a;
+    --btn-hover-bg: #a0a0ff;
+    --btn-hover-light: #d0d0ff;
+    --btn-hover-dark: #5050aa;
+    --btn-active-light: #c0c0ff;
+    --btn-active-dark: #4a4a90;
+
     /* Border */
     --border: clamp(4px, 0.8vw, 8px) solid;
 
     /* Scale */
-     --scale: clamp(7px, 1.1vw, 14px);
-    /*
-
-    Wat hieronder staat snap ik half maar je moet basically je gewenste grootte door 14 delen!! Dat dan * calc --scale doen.
-
-    Wanneer ik iets in em wil doen dat keer 16 : 14.
-
-                        --scale = 1 eenheid
-                        op 1440px scherm → 1.1vw = ~15px
-                        
-                        alles x vermenigvuldigen:
-                        1  = 14px  → kleine details, borders
-                        2  = 28px  → kleine iconen, gaps
-                        3  = 42px  → knophoogte, regelafstand
-                        4  = 56px  → grote iconen, thumbnails
-                        6  = 84px  → sectie padding
-                        8  = 112px → grote elementen
-                        12 = 168px → knoopbreedte klein
-                        20 = 280px → halve knop
-                        40 = 560px → volledige knop
-    */
+    --scale: clamp(7px, 1.1vw, 14px);
 }
+
+/* --------------------------------------------------------------------------------- MARK: NETHER THEMA
+*/
+
+/* Achtergrond gegenereerd met AI. Prompt: een nether/underworld biome achtergrond voor mijn minecraft portfolio in pixelart stijl, rood en oranje lava tinten */
+[data-theme="underworld"]{
+    --gray: #6b2222;
+    --gray-basic: #7a2a2a;
+    --light-gray: #d4886a;
+    --another-dark-gray: #3d1a1a;
+    --dark-gray: #2a0f0f;
+    --black: #1a0808;
+    --white: #ffddcc;
+    --subtekst: #bb7755;
+
+    --bg-image: url('../images/background-nether.png');
+    --panel-bg: rgba(30, 8, 8, 0.85);
+
+    --btn-border-light: #bb5533;
+    --btn-border-dark: #441111;
+    --btn-hover-bg: #cc3311;
+    --btn-hover-light: #ff5522;
+    --btn-hover-dark: #550000;
+    --btn-active-light: #ff7744;
+    --btn-active-dark: #661100;
+}
+
+/* --------------------------------------------------------------------------------- MARK: BODY
+*/
 
 body{
     position: relative;
@@ -64,10 +86,7 @@ body{
     width: 100vw;
     height: 100vh;
 
-    /* Minecraft achtergrond */
-    /* Deze achtergrond is gegenereerd met chatGPT. Prompt: ik heb dit beginscherm van minecraft nagemaakt in html & css om als portfolio te gebruiken. 
-    Kun jij een typische minecraft achtergrond genereren die hierbij past? Ook in het juiste formaat */
-    background-image: url(../images/background.png);
+    background-image: var(--bg-image);
     background-size: cover;
     background-position: center;
     image-rendering: pixelated;
@@ -100,27 +119,27 @@ body{
     }
 
     .btn{
-        border-top:    var(--border) #c8c8c8;
-        border-left:   var(--border) #c8c8c8;
-        border-right:  var(--border) #4a4a4a;
-        border-bottom: var(--border) #4a4a4a;
+        border-top:    var(--border) var(--btn-border-light);
+        border-left:   var(--border) var(--btn-border-light);
+        border-right:  var(--border) var(--btn-border-dark);
+        border-bottom: var(--border) var(--btn-border-dark);
 
         padding: calc(var(--scale) * 0.85) 0;
         font-size: calc(var(--scale) * 1.14);
     }
 
     .btn:hover{
-        background-color: #a0a0ff;
-        border-top-color:    #d0d0ff;
-        border-left-color:   #d0d0ff;
-        border-right-color:  #5050aa;
-        border-bottom-color: #5050aa;
+        background-color: var(--btn-hover-bg);
+        border-top-color:    var(--btn-hover-light);
+        border-left-color:   var(--btn-hover-light);
+        border-right-color:  var(--btn-hover-dark);
+        border-bottom-color: var(--btn-hover-dark);
     }
 
     .btn:active{
-        border-top-color:    #4a4a90;
-        border-left-color:   #4a4a90;
-        border-right-color:  #c0c0ff;
-        border-bottom-color: #c0c0ff;
+        border-top-color:    var(--btn-active-dark);
+        border-left-color:   var(--btn-active-dark);
+        border-right-color:  var(--btn-active-light);
+        border-bottom-color: var(--btn-active-light);
     }
 }

@@ -1,11 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Project 03: CSS to the Rescue</title>
+    <script src="./js/theme-init.js"></script>
+    <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/project.css" rel="stylesheet">
+    <link rel="icon" href="./images/favicon.png">
 </head>
+
 <body>
-    <h1>Hier is nog niks maar de test werkt!</h1>
+    <div class="panel">
+
+        <div class="panel-header">
+            <div class="tab">
+                <span>Project 03: CSS to the Rescue</span>
+            </div>
+            <a href="werelden.html" class="panel-close">&#10005;</a>
+        </div>
+
+        <div class="scroll-wrap">
+            <main>
+
+                <h1>CSS to the Rescue</h1>
+
+                <section>
+                    <h2>Project omschrijving</h2>
+                    <p>CSS to the Rescue had één grote beperking: geen JavaScript, geen ID's en geen classes. Ik koos voor de richting Silly Walk als eerbetoon aan Monty Python. Het resultaat is een ster met benen die een silly walk uitvoert, met vier interactieve knoppen die de stijl en het gedrag aanpassen, met 16 mogelijke combinaties die allemaal zijn uitgewerkt. Alles via pure CSS.</p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/selavanvreeswijk/css-to-the-rescue" target="_blank">
+                            <button class="btn">GitHub</button>
+                        </a>
+                        <a href="https://selavanvreeswijk.github.io/css-to-the-rescue/" target="_blank">
+                            <button class="btn">Website</button>
+                        </a>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Plannen, ontwikkelingen en reflecties</h2>
+                    <p>Ik was de eerste week ziek, dus ik ben wat later begonnen dan ik wilde. In de vakantie bedacht ik het concept: een ster met lange benen die een silly walk doet. Ik ben begonnen met <code>clip-path</code> om de stervorm te maken, en daarna de benen laten bewegen met CSS animaties. Dat klinkt simpeler dan het is: alles heeft invloed op elkaar, en zonder classes of ID's moet je heel slim nadenken over hoe je elementen selecteert.</p>
+                    <p>Via container style queries kon ik de vier knoppen combineren tot 16 unieke states, elk met hun eigen achtergrond, animatiesnelheid en tekst. Ik heb Monty Python quotes opgezocht en die per state verwerkt in de titels en knoppen. De ster draait, loopt van links naar rechts, draait sneller bij een 'evil' mode en heeft in een defecte staat een gestreepte achtergrond.</p>
+                    <p>Ik heb ook gewerkt met <code>@layer</code>, variabele fonts, <code>::before</code> en <code>::after</code>, en <code>transform-origin</code> om de rotatie goed te positioneren. Uiteindelijk belandde ik op meer dan 2.500 regels CSS. Voor iemand die dacht dat CSS simpel was, was dit een eye-opener.</p>
+                </section>
+
+                <section>
+                    <h2>Afbeeldingen</h2>
+                    <div class="img-grid">
+                        <figure>
+                            <img src="./images/css/thumbnail-css.png" alt="Thumbnail CSS to the Rescue">
+                            <figcaption>De ster in actie met een van de vier modi</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Uitkomsten en inzichten</h2>
+                    <p>Dit project heeft me laten zien hoe krachtig CSS eigenlijk is als je er echt induikt. Container style queries, <code>@layer</code>, variabele fonts, <code>clip-path</code>, dingen die ik voorheen niet kende of nooit had gebruikt. De beperking van geen JavaScript dwong me om creatief te denken en meer uit CSS te halen dan ik voor mogelijk hield.</p>
+                    <p>Ik vond het ook leuk om iets grappigs te maken en me te verdiepen in Monty Python. De combinatie van technische uitdaging en humor maakte dit project één van mijn favorieten van de minor.</p>
+                </section>
+
+            </main>
+            <div class="scrollbar"></div>
+        </div>
+
+        <div class="panel-nav">
+            <a href="bt.html">
+                <button class="btn">&#8592; Vorig project</button>
+            </a>
+            <a href="hackaton.html">
+                <button class="btn">Volgend project &#8594;</button>
+            </a>
+        </div>
+
+    </div>
+
+    <script src="./js/project.js"></script>
 </body>
 </html>

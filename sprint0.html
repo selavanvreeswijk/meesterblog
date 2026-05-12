@@ -1,11 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Project 01: Sprint 0</title>
+    <script src="./js/theme-init.js"></script>
+    <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/project.css" rel="stylesheet">
+    <link rel="icon" href="./images/favicon.png">
 </head>
+
 <body>
-    <h1>Hier is nog niks maar de test werkt!</h1>
+    <div class="panel">
+
+        <div class="panel-header">
+            <div class="tab">
+                <span>Project 01: Sprint 0</span>
+            </div>
+            <a href="werelden.html" class="panel-close">&#10005;</a>
+        </div>
+
+        <div class="scroll-wrap">
+            <main>
+
+                <h1>Sprint 0</h1>
+
+                <section>
+                    <h2>Project omschrijving</h2>
+                    <p>Sprint 0 was de eerste opdracht van de minor: maak een persoonlijke portfolio website. Geen framework, gewoon HTML en CSS en een beetje JavaScript. Ik heb de website gebouwd met een horizontale scroll op de homepage, zodat elk onderdeel als een apart paneel voorbijkomt. Verder heb ik informatie over mijn klasgenoten ingeladen vanuit de API van de minor, en heb ik twee thema's gemaakt die je kunt wisselen.</p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/selavanvreeswijk/personal-website" target="_blank">
+                            <button class="btn">GitHub</button>
+                        </a>
+                        <a href="https://selavanvreeswijk.github.io/personal-website/" target="_blank">
+                            <button class="btn">Website</button>
+                        </a>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Plannen, ontwikkelingen en reflecties</h2>
+                    <p>Ik ben begonnen met schetsen voor de opbouw van de site. Mijn idee was een horizontale scroll, wat meteen een leuke uitdaging bleek: je moet dan goed nadenken over hoe de layout werkt en hoe je dat responsive houdt. Ik heb <code>clamp()</code> leren gebruiken voor responsive tekst en spacing zonder breakpoints, en dat vond ik meteen super handig.</p>
+                    <p>Voor de klasgenoten heb ik de API van de minor gebruikt. Dat was mijn eerste echte keer werken met een externe databron in JavaScript, dus dat kostte best wat tijd om goed te krijgen. De twee thema's heb ik via CSS custom properties opgelost, en met een typewriter animatie voor de introductietekst wilde ik wat extra leven in de pagina brengen.</p>
+                    <p>Achteraf had ik sommige dingen graag wat strakker willen afwerken, de horizontale scroll werkte niet perfect op alle schermformaten, maar voor een eerste project in de minor was ik blij met het resultaat.</p>
+                </section>
+
+                <section>
+                    <h2>Afbeeldingen</h2>
+                    <div class="img-grid">
+                        <figure>
+                            <img src="./images/sprint0/thumbnail-sprint0.png" alt="Thumbnail Sprint 0">
+                            <figcaption>Overzicht van de portfolio homepage</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Uitkomsten en inzichten</h2>
+                    <p>Ik heb geleerd hoe je <code>clamp()</code> inzet voor responsive design zonder media queries, hoe je met de Fetch API externe data inlaadt, en hoe je CSS custom properties gebruikt voor theming. De horizontale scroll leerde me ook veel over hoe <code>overflow</code> en <code>scroll-snap</code> werken.</p>
+                    <p>Wat ik meeneem: begin eerder met testen op andere schermformaten, en denk al in de schetsfase na over hoe scroll-gedrag werkt. Maar het voelde goed om meteen iets persoonlijks te maken als eerste project.</p>
+                </section>
+
+            </main>
+            <div class="scrollbar"></div>
+        </div>
+
+        <div class="panel-nav">
+            <span></span>
+            <a href="bt.html">
+                <button class="btn">Volgend project &#8594;</button>
+            </a>
+        </div>
+
+    </div>
+
+    <script src="./js/project.js"></script>
 </body>
 </html>

@@ -5,23 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Portfolio</title>
+    <script src="./js/theme-init.js"></script>
     <link href="./css/styles.css" rel="stylesheet">
     <link href="./css/home.css" rel="stylesheet">
-    <link rel="icon" href="./images/favicon.png"> 
+    <link rel="icon" href="./images/favicon.png">
 </head>
 
 <body>
+    <img src="./images/minecraft-sela.png" alt="Minecraft Sela" class="sela-bounce">
+
     <header>
         <h1>Minor Web Design and Development</h1>
         <h2>Sela van Vreeswijk</h2>
 
-        <!-- ::after van maken <p>Hier nog tekst!</p> -->
+        <!-- ::after van maken <p>Dit is die gele tekst!</p> -->
     </header>
 
     <main>
         <div class="btns">
             <a href="sprint0.html">
-                <button class="btn">Start</button> <!-- "Start een willekeurige wereld dat er dan een random wereld wordt gegenereerd?" -->
+                <button class="btn">Start</button>
             </a>
 
             <a href="werelden.html">
@@ -29,10 +32,8 @@
             </a>
 
             <div class="btn-row">
-                <button class="btn">Instellingen...</button> <!--Ander thema van Minecraft-->
-                <button class="btn">Quit game</button> <!--Website crasht-->
-
-                <!-- Na deze button een kleine (after?)button met mijn minecraft skin waar je op kunt klikken -->
+                <button class="btn" onclick="location.href='settings.html'">Instellingen...</button>
+                <button class="btn" onclick="window.close()">Quit game</button>
             </div>
         </div>
     </main>

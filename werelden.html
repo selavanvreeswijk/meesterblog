@@ -5,103 +5,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Portfolio</title>
+    <script src="./js/theme-init.js"></script>
     <link href="./css/styles.css" rel="stylesheet">
     <link href="./css/werelden.css" rel="stylesheet">
-    <link rel="icon" href="./images/favicon.png"> 
+    <link rel="icon" href="./images/favicon.png">
 </head>
 
 <body>
-    <!-- Hierboven een ::before voor de label werelden -->
-    <!-- Hierboven een ::after voor het kruisje rechtsboven werken die dan teruggaat naar home--> <!-- https://www.flaticon.com/free-icons/back-arrow -->
+    <div class="panel">
 
-    <!-- Ik kan hier ook nog een tab maken met 'friends' en daar vanuit de API Xavannah, Louise, Iris, Joshua & Luna inladen met allemaal eigen minecraft skin -->
-    <main class="worlds-list">
-        <div class="scrollbar"></div>
+        <!-- Tab bovenaan -->
+        <div class="panel-header">
+            <div class="tab">
+                <img src="./images/favicon.png" alt="Werelden icoon">
+                <span>Werelden</span>
+            </div>
+        </div>
 
-        <a id="open-btn" href="#">
-            
-            <button>Open wereld</button> 
-        </a>
+        <!-- Knoppen: open wereld + terug naar home -->
+        <div class="panel-btns">
+            <a id="open-btn" href="#">
+                <button class="btn">Open wereld</button>
+            </a>
+            <a href="index.html" class="btn-terug">
+                <button class="btn">&#8592;</button>
+            </a>
+        </div>
 
-        <section>
-            <h2>Werelden</h2>
+        <!-- Ik kan hier ook nog een tab maken met 'friends' en daar vanuit de API Xavannah, Louise, Iris, Joshua & Luna inladen met allemaal eigen minecraft skin -->
+        <div class="scroll-wrap">
+            <main class="worlds-list">
 
-            <!-- Sprint 0 -->
-            <label class="wereld">
-                <input type="radio" name="wereld" value="sprint0.html">
+                <section>
+                    <h2>Werelden</h2>
 
-                <img src="./images/sprint0/thumbnail-sprint0.png" alt="Thumbnail van Sprint 0">
+                    <!-- Sprint 0 -->
+                    <label class="wereld">
+                        <input type="radio" name="wereld" value="sprint0.html">
+                        <img src="./images/sprint0/thumbnail-sprint0.png" alt="Thumbnail van Sprint 0">
+                        <div>
+                            <h3>Project 01: Sprint 0</h3>
+                            <p>De HTML &amp; CSS Basics.</p>
+                            <div>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                            </div>
+                        </div>
+                    </label>
 
-                <div>
-                    <h3>Project 01: Sprint 0</h3>
-                    <p>De HTML & CSS Basics.</p>
-                    <div>
-                        <p>HTML</p>
-                        <p>CSS</p>
-                    </div>
-                </div>
-            </label>
+                    <!-- Browser Technologies -->
+                    <label class="wereld">
+                        <input type="radio" name="wereld" value="bt.html">
+                        <img src="./images/bt/thumbnail-bt.png" alt="Thumbnail Browser Technologies">
+                        <div>
+                            <h3>Project 02: Browser Technologies</h3>
+                            <p>Een belastingdienst formulier in NS huisstijl.</p>
+                            <div>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                                <p>JavaScript</p>
+                            </div>
+                        </div>
+                    </label>
 
-            <!-- Browser Technologies -->
-            <label class="wereld">
-                <input type="radio" name="wereld" value="bt.html">
+                    <!-- CSS -->
+                    <label class="wereld">
+                        <input type="radio" name="wereld" value="css.html">
+                        <img src="./images/css/thumbnail-css.png" alt="Thumbnail CSS to the Rescue">
+                        <div>
+                            <h3>Project 03: CSS to the Rescue</h3>
+                            <p>Geen JavaScript, geen ID's of classes en ik koos voor de richting Silly Walk als eerbetoon aan Monty Python. Go on then!</p>
+                            <div>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                            </div>
+                        </div>
+                    </label>
 
-                <img src="./images/bt/thumbnail-bt.png" alt="Thumbnail Browser Technologies">
+                    <!-- Hackaton -->
+                    <label class="wereld">
+                        <input type="radio" name="wereld" value="hackaton.html">
+                        <img src="./images/hackaton/thumbnail-hackaton.png" alt="Thumbnail Hackaton">
+                        <div>
+                            <h3>Project 04: Hackaton</h3>
+                            <p>In dit groepsproject moesten we binnen 4 dagen een website maken voor een opdrachtgever. Dit ging over een satelliet die in 2030 wil gaan opstijgen.</p>
+                            <div>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                                <p>JavaScript</p>
+                            </div>
+                        </div>
+                    </label>
 
-                <div>
-                    <h3>Project 02: Browser Technologies</h3>
-                    <p>Een belastingdienst formulier in NS huisstijl.</p>
-                    <div>
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>JavaScript</p>
-                    </div>
-                </div>
-            </label>
+                    <!-- API -->
+                    <label class="wereld">
+                        <input type="radio" name="wereld" value="api.html">
+                        <img src="./images/thumbnail-api.png" alt="Thumbnail API">
+                        <div>
+                            <h3>Project 05: API</h3>
+                            <p>In dit project moest ik gebruik maken van een Web API en Content API om iets te maken.</p>
+                            <div>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                                <p>JavaScript</p>
+                            </div>
+                        </div>
+                    </label>
 
+                    <!-- Human Centered Design -->
+                    <label class="wereld">
+                        <input type="radio" name="wereld" value="hcd.html">
+                        <img src="./images/thumbnail-hcd.png" alt="Thumbnail Human Centered Design">
+                        <div>
+                            <h3>Project 06: Human Centered Design</h3>
+                            <p>Een product ontwerpen en testen met echte gebruikers.</p>
+                            <div>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                                <p>JavaScript</p>
+                            </div>
+                        </div>
+                    </label>
 
-            <!-- CSS -->
-            <label class="wereld">
-                <input type="radio" name="wereld" value="css.html">
-            
-                <img src="./images/css/thumbnail-css.png" alt="Thumbnail CSS to the Rescue"> 
+                    <!-- Weekly Nerds -->
+                    <label class="wereld">
+                        <input type="radio" name="wereld" value="weeklynerd.html">
+                        <!-- Bron: afbeelding weekly nerds gegenereerd met ChatGPT -->
+                        <!-- Prompt: genereer minecraft 3d skins caracthers van weekly nerds in web development. mannen en vrouwen die eruit zien alsof ze dus in de web development industrie/ wereld zitten. maak het een stuk of 8 weekly nerds, twee vrouwen en de rest man -->
+                        <img src="./images/weekly-nerds.png" alt="Thumbnail Weekly Nerds">
+                        <div>
+                            <h3>Project 07: Weekly Nerds</h3>
+                            <p>Wekelijkse talks van developers en designers.</p>
+                            <div>
+                                <p>HTML</p>
+                                <p>CSS</p>
+                            </div>
+                        </div>
+                    </label>
 
-                <div>
-                    <h3>Project 03: CSS</h3>
-                    <p>Geen JavaScript, geen ID's of classes en ik koos voor de richting Silly Walk als eerbetoon aan Monty Python. Go on then!</p>
+                    <!-- Leerdoelen -->
+                    <label class="wereld">
+                        <input type="radio" name="wereld" value="leerdoelen.html">
+                        <!-- Bron: afbeelding gegenereerd met chatGPT -->
+                        <!-- Prompt: genereer nu in de vorm van dit blok mijn hoofd -->
+                        <img src="./images/mijn-hoofd.png" alt="Thumbnail Leerdoelen">
+                        <div>
+                            <h3>Leerdoelen</h3>
+                            <p>Mijn persoonlijke leerdoelen voor de minor.</p>
+                            <div>
+                                <p>Reflectie</p>
+                            </div>
+                        </div>
+                    </label>
 
-                    <div>
-                        <p>HTML</p>
-                        <p>CSS</p>
-                    </div>                    
-                </div>
-            </label>  
+                </section>
+            </main>
+            <div class="scrollbar"></div>
+        </div>
 
-            <!-- Hackaton -->
-            <label class="wereld">
-                <input type="radio" name="wereld" value="hackaton.html">
-
-                <img src="./images/hackaton/thumbnail-hackaton.png" alt="Thumbnail Hackaton"> 
-
-                <div>
-                    <h3>Project 04: Hackaton</h3>
-                    <p>In dit groepsproject moesten we binnen 4 dagen een website maken voor een opdrachtgever. 
-                        Dit ging over een satelliet die in 2030 wil gaan opstijgen.</p>
-
-                    <div>
-                        <p>HTML</p>
-                        <p>CSS</p>
-                        <p>JavaScript</p>
-                    </div>                    
-                </div>
-            </label>
-
-            <!-- API -->
-            <!-- HCD -->
-            <!-- Meesterproef -->
-            <!-- Weekly Nerds -->
-        </section>
-    </main>
+    </div>
 
     <script src="./js/script.js"></script>
 </body>
