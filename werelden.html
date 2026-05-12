@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Portfolio</title>
+    <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/werelden.css" rel="stylesheet">
+    <link rel="icon" href="./images/favicon.png"> 
+</head>
+
+<body>
+    <!-- Hierboven een ::before voor de label werelden -->
+    <!-- Hierboven een ::after voor het kruisje rechtsboven werken die dan teruggaat naar home--> <!-- https://www.flaticon.com/free-icons/back-arrow -->
+
+    <!-- Ik kan hier ook nog een tab maken met 'friends' en daar vanuit de API Xavannah, Louise, Iris, Joshua & Luna inladen met allemaal eigen minecraft skin -->
+    <main class="worlds-list">
+        <div class="scrollbar"></div>
+
+        <a id="open-btn" href="#">
+            
+            <button>Open wereld</button> 
+        </a>
+
+        <section>
+            <h2>Werelden</h2>
+
+            <!-- Sprint 0 -->
+            <label class="wereld">
+                <input type="radio" name="wereld" value="sprint0.html">
+
+                <img src="./images/sprint0/thumbnail-sprint0.png" alt="Thumbnail van Sprint 0">
+
+                <div>
+                    <h3>Project 01: Sprint 0</h3>
+                    <p>De HTML & CSS Basics.</p>
+                    <div>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                    </div>
+                </div>
+            </label>
+
+            <!-- Browser Technologies -->
+            <label class="wereld">
+                <input type="radio" name="wereld" value="bt.html">
+
+                <img src="./images/bt/thumbnail-bt.png" alt="Thumbnail Browser Technologies">
+
+                <div>
+                    <h3>Project 02: Browser Technologies</h3>
+                    <p>Een belastingdienst formulier in NS huisstijl.</p>
+                    <div>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JavaScript</p>
+                    </div>
+                </div>
+            </label>
+
+
+            <!-- CSS -->
+            <label class="wereld">
+                <input type="radio" name="wereld" value="css.html">
+            
+                <img src="./images/css/thumbnail-css.png" alt="Thumbnail CSS to the Rescue"> 
+
+                <div>
+                    <h3>Project 03: CSS</h3>
+                    <p>Geen JavaScript, geen ID's of classes en ik koos voor de richting Silly Walk als eerbetoon aan Monty Python. Go on then!</p>
+
+                    <div>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                    </div>                    
+                </div>
+            </label>  
+
+            <!-- Hackaton -->
+            <label class="wereld">
+                <input type="radio" name="wereld" value="hackaton.html">
+
+                <img src="./images/hackaton/thumbnail-hackaton.png" alt="Thumbnail Hackaton"> 
+
+                <div>
+                    <h3>Project 04: Hackaton</h3>
+                    <p>In dit groepsproject moesten we binnen 4 dagen een website maken voor een opdrachtgever. 
+                        Dit ging over een satelliet die in 2030 wil gaan opstijgen.</p>
+
+                    <div>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JavaScript</p>
+                    </div>                    
+                </div>
+            </label>
+
+            <!-- API -->
+            <!-- HCD -->
+            <!-- Meesterproef -->
+            <!-- Weekly Nerds -->
+        </section>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+main{
+    background: var(--black);
+    color: var(--white);
+
+    width: 50vw;
+    height: 70vh;
+
+    /* Custom Scrollbar */
+    position: relative;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    .scrollbar{
+        position: absolute;
+        right: 2px;
+        top: 2px;
+
+        width: calc(var(--scale) * 3.5);
+        height: calc(var(--scale) * 4);
+        background: url("../images/spider.png") no-repeat center / contain;
+        
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .scrollbar.visible{
+        opacity: 1;
+    }
+
+    /* Werelden */
+    section{
+        margin: calc(var(--scale) * 0.8);
+    }
+
+    /* Knop 'open wereld' */
+    a > button{
+        background-color: var(--light-gray);
+        color: var(--black);
+
+        padding: 2em 4em;
+        margin: calc(var(--scale) * 0.8);
+    }
+
+    /* Elke section project */
+    .wereld{
+        display: flex;
+        flex-direction: row;
+        background-color: var(--another-dark-gray);
+
+        border-top:    var(--border) #373737;
+        border-left:   var(--border) #373737;
+        border-right:  var(--border) #212121;
+        border-bottom: var(--border) #212121;
+
+        > img{
+            width: 7vw;
+            object-fit: contain;
+            padding: calc(var(--scale) * 0.5);
+        }
+
+        > div{
+            display: flex;
+            flex-direction: column;
+
+            > div{
+                display: flex;
+                flex-direction: row;
+
+                gap: calc(var(--scale) * 0.5);
+
+                p{
+                    color: var(--subtekst);
+                }
+            }
+        }
+    }
+
+    /* Knop ingedrukt + wereld en dan pagina laden */
+    input[type="radio"] {
+        display: none;
+    }
+
+    .wereld:has(input:checked) {
+        background: #7a7aaa;
+        border-color: #aaaaff;
+    }
+
+    #open-btn button {
+        opacity: 0.5;
+    }
+
+    .container:has(input:checked) ~ * #open-btn button,
+    main:has(input:checked) #open-btn button {
+        opacity: 1;
+    }
+}
+

@@ -1,0 +1,126 @@
+/* --------------------------------------------------------------------------------- MARK: BASIS 
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{ 
+    font-family:'Minecraft Heading';
+    src: url('../fonts/minecrafter.alt.ttf') format('truetype');
+}
+
+@font-face{ 
+    font-family:'Minecraft Text';
+    src: url('../fonts/minecraft.ttf') format('truetype');
+}
+
+/* --------------------------------------------------------------------------------- MARK: BODY
+*/
+
+:root{
+    /* Kleuren */
+    --gray: #555555;
+    --gray-basic: gray;
+    --light-gray: #C6C6C6;
+    --another-dark-gray: #4a4a4a;
+    --dark-gray: #333333;
+    --black: black;
+    --white: white;
+    --subtekst: #aaaaaa;
+
+    /* Border */
+    --border: clamp(4px, 0.8vw, 8px) solid;
+
+    /* Scale */
+     --scale: clamp(7px, 1.1vw, 14px);
+    /*
+
+    Wat hieronder staat snap ik half maar je moet basically je gewenste grootte door 14 delen!! Dat dan * calc --scale doen.
+
+    Wanneer ik iets in em wil doen dat keer 16 : 14.
+
+                        --scale = 1 eenheid
+                        op 1440px scherm → 1.1vw = ~15px
+                        
+                        alles x vermenigvuldigen:
+                        1  = 14px  → kleine details, borders
+                        2  = 28px  → kleine iconen, gaps
+                        3  = 42px  → knophoogte, regelafstand
+                        4  = 56px  → grote iconen, thumbnails
+                        6  = 84px  → sectie padding
+                        8  = 112px → grote elementen
+                        12 = 168px → knoopbreedte klein
+                        20 = 280px → halve knop
+                        40 = 560px → volledige knop
+    */
+}
+
+body{
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    /* Minecraft achtergrond */
+    /* Deze achtergrond is gegenereerd met chatGPT. Prompt: ik heb dit beginscherm van minecraft nagemaakt in html & css om als portfolio te gebruiken. 
+    Kun jij een typische minecraft achtergrond genereren die hierbij past? Ook in het juiste formaat */
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-position: center;
+    image-rendering: pixelated;
+
+    p{
+        font-family: 'Minecraft Text', sans-serif;
+        font-size: calc(var(--scale) * 1);
+    }
+
+    h3{
+        font-family: 'Minecraft Text', sans-serif;
+        font-size: calc(var(--scale) * 1.15);
+    }
+
+    /* --------------- Knoppen --------------- */
+    button{
+        color: var(--white);
+        background-color: var(--gray-basic);
+        font-family: 'Minecraft Text', sans-serif;
+
+        font-size: calc(var(--scale) * 1.3);
+    }
+
+    a{
+        display: flex;
+        flex-direction: column;
+
+        width: 38vw;
+        text-decoration: none;
+    }
+
+    .btn{
+        border-top:    var(--border) #c8c8c8;
+        border-left:   var(--border) #c8c8c8;
+        border-right:  var(--border) #4a4a4a;
+        border-bottom: var(--border) #4a4a4a;
+
+        padding: calc(var(--scale) * 0.85) 0;
+        font-size: calc(var(--scale) * 1.14);
+    }
+
+    .btn:hover{
+        background-color: #a0a0ff;
+        border-top-color:    #d0d0ff;
+        border-left-color:   #d0d0ff;
+        border-right-color:  #5050aa;
+        border-bottom-color: #5050aa;
+    }
+
+    .btn:active{
+        border-top-color:    #4a4a90;
+        border-left-color:   #4a4a90;
+        border-right-color:  #c0c0ff;
+        border-bottom-color: #c0c0ff;
+    }
+}
