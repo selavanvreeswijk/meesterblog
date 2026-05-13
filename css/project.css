@@ -59,12 +59,16 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
 
-        width: auto;
+        width: calc(var(--scale) * 3);
+        height: calc(var(--scale) * 3);
+        padding: 0;
+
         font-family: 'Minecraft Text', sans-serif;
         font-size: calc(var(--scale) * 1.2);
         color: var(--white);
-        padding: calc(var(--scale) * 0.4) calc(var(--scale) * 0.8);
+        line-height: 1;
 
         background: var(--gray);
 
@@ -208,6 +212,101 @@ main{
             text-align: center;
         }
     }
+}
+
+/* --------------------------------------------------------------------------------- MARK: WEEKLY NERDS ACCORDIONS
+*/
+
+.weekly-nerds{
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--scale) * 0.5);
+    margin-top: calc(var(--scale) * 0.8);
+}
+
+.weekly-nerds details{
+    background: rgba(0, 0, 0, 0.25);
+    border-top:    var(--border) var(--gray);
+    border-left:   var(--border) var(--gray);
+    border-right:  var(--border) var(--dark-gray);
+    border-bottom: var(--border) var(--dark-gray);
+}
+
+.weekly-nerds details[open] summary{
+    border-bottom: 2px solid var(--gray);
+    margin-bottom: calc(var(--scale) * 0.8);
+}
+
+.weekly-nerds summary{
+    font-family: 'Minecraft Text', sans-serif;
+    font-size: calc(var(--scale) * 1.1);
+    color: var(--white);
+    padding: calc(var(--scale) * 0.7) calc(var(--scale) * 0.9);
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+
+    display: flex;
+    align-items: center;
+    gap: calc(var(--scale) * 0.6);
+}
+
+.weekly-nerds summary::-webkit-details-marker{
+    display: none;
+}
+
+.weekly-nerds summary::before{
+    content: '▶';
+    font-size: calc(var(--scale) * 0.8);
+    color: var(--subtekst);
+    transition: transform 0.15s ease;
+    display: inline-block;
+}
+
+.weekly-nerds details[open] summary::before{
+    transform: rotate(90deg);
+}
+
+.weekly-nerds summary:hover{
+    color: var(--btn-hover-bg);
+}
+
+.weekly-nerds .nerd-content{
+    padding: 0 calc(var(--scale) * 0.9) calc(var(--scale) * 0.9);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--scale) * 0.5);
+}
+
+.weekly-nerds .nerd-content p{
+    color: var(--light-gray);
+    line-height: 1.8;
+}
+
+.weekly-nerds .nerd-content ul{
+    color: var(--light-gray);
+    font-family: 'Minecraft Text', sans-serif;
+    font-size: calc(var(--scale) * 1);
+    line-height: 1.8;
+    padding-left: calc(var(--scale) * 1.5);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--scale) * 0.3);
+}
+
+.weekly-nerds .nerd-content pre{
+    background: rgba(0, 0, 0, 0.4);
+    border-left: 3px solid var(--gray);
+    padding: calc(var(--scale) * 0.6) calc(var(--scale) * 0.8);
+    overflow-x: auto;
+}
+
+.weekly-nerds .nerd-content pre code{
+    font-family: 'Minecraft Text', sans-serif;
+    font-size: calc(var(--scale) * 0.9);
+    color: var(--light-gray);
+    background: none;
+    padding: 0;
 }
 
 /* --------------------------------------------------------------------------------- MARK: NAVIGATIE KNOPPEN

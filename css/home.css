@@ -78,6 +78,67 @@ body{
     }
 }
 
+/* --------------------------------------------------------------------------------- MARK: CREEPER EXPLOSIE
+*/
+
+.creeper-overlay{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: calc(var(--scale) * 14);
+    image-rendering: pixelated;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.creeper-overlay.charging{
+    animation: creeper-charge 2s ease-in forwards;
+}
+
+.creeper-overlay.exploding{
+    animation: creeper-explode 0.35s ease-out forwards;
+}
+
+@keyframes creeper-charge{
+    0%   { transform: translate(-50%, -50%) scale(0.1)  rotate(0deg); }
+    10%  { transform: translate(-50%, -50%) scale(0.22) rotate(-6deg); }
+    20%  { transform: translate(-50%, -50%) scale(0.38) rotate(6deg); }
+    30%  { transform: translate(-50%, -50%) scale(0.52) rotate(-9deg); }
+    40%  { transform: translate(-50%, -50%) scale(0.68) rotate(9deg); }
+    50%  { transform: translate(-50%, -50%) scale(0.82) rotate(-12deg); }
+    60%  { transform: translate(-50%, -50%) scale(1)    rotate(12deg); }
+    70%  { transform: translate(-50%, -50%) scale(1.25) rotate(-14deg); filter: brightness(1); }
+    80%  { transform: translate(-50%, -50%) scale(1.55) rotate(14deg);  filter: brightness(1.4); }
+    90%  { transform: translate(-50%, -50%) scale(1.85) rotate(-8deg);  filter: brightness(2); }
+    100% { transform: translate(-50%, -50%) scale(2.2)  rotate(0deg);   filter: brightness(3); }
+}
+
+@keyframes creeper-explode{
+    0%   { transform: translate(-50%, -50%) scale(2.2); opacity: 1; filter: brightness(8); }
+    100% { transform: translate(-50%, -50%) scale(7);   opacity: 0; filter: brightness(20); }
+}
+
+.explosion-flash{
+    position: fixed;
+    inset: 0;
+    background: white;
+    opacity: 0;
+    z-index: 99;
+    pointer-events: none;
+    transition: none;
+}
+
+.explosion-flash.active{
+    animation: flash-boom 0.35s ease-out forwards;
+}
+
+@keyframes flash-boom{
+    0%   { opacity: 0; }
+    20%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 /* --------------------------------------------------------------------------------- MARK: SKIN + BOUNCE ANIMATIE
 */
 

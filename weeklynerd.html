@@ -29,12 +29,6 @@
                 <section>
                     <h2>Project omschrijving</h2>
                     <p>Elke week kregen we een gastspreker: een developer, designer of iemand anders uit de industrie die een talk gaf over hun werk, een techniek of een visie op het vak. De Weekly Nerds waren bedoeld om breder te kijken dan alleen de projecten: inspiratie opdoen, nieuwe perspectieven horen en zien hoe het werkveld eruitziet.</p>
-
-                    <div class="project-links">
-                        <a href="https://github.com/selavanvreeswijk/weekly-nerd" target="_blank">
-                            <button class="btn">GitHub</button>
-                        </a>
-                    </div>
                 </section>
 
                 <section>
@@ -48,7 +42,7 @@
                     <div class="img-grid">
                         <figure>
                             <img src="./images/weekly-nerds.png" alt="Thumbnail Weekly Nerds">
-                            <figcaption>De Weekly Nerds in Minecraft-stijl</figcaption>
+                            <figcaption>De Weekly Nerds in Minecraft thema</figcaption>
                         </figure>
                     </div>
                 </section>
@@ -58,16 +52,158 @@
                     <p>De Weekly Nerds lieten me zien hoe breed het vak web development eigenlijk is. Niet alleen code schrijven, maar ook nadenken over gebruikers, toegankelijkheid, samenwerking en hoe technologie past in een bredere context. Een aantal talks hebben direct invloed gehad op keuzes die ik in mijn projecten maakte. Dat is precies wat dit soort sessies moeten doen.</p>
                 </section>
 
+                <section>
+                    <h2>Verslagen</h2>
+
+                    <div class="weekly-nerds">
+
+                        <!-- Killian Valkhof -->
+                        <details>
+                            <summary>Killian Valkhof  |  Functionaliteiten op het web  |  4 feb</summary>
+                            <div class="nerd-content">
+                                <p>Killian heeft Polypane gemaakt, een browser speciaal voor developers die je responsive werk makkelijker maakt. Het is gratis voor studenten en ik vond het interessant om te zien hoeveel je daarmee tegelijk kunt checken. Maar wat ik het meest bijgebleven is, was zijn kernboodschap: je hebt veel minder JavaScript nodig dan je denkt.</p>
+                                <p>Hij gebruikte de zin "Choose the least powerful language suitable for a given purpose" en dat heeft echt iets bij me geklikt. JavaScript is breekbaar. Als er iets mis gaat, valt alles weg. CSS en HTML zijn dat veel minder. Dus waarom zou je iets bouwen in JS als het ook in CSS kan?</p>
+                                <p>Wat ik interessant vond:</p>
+                                <ul>
+                                    <li>Een checkbox als toggle switch zonder JS, puur met HTML. Werkt alleen in Safari voor nu, maar laat zien waar het naartoe gaat.</li>
+                                    <li>Soepel scrollen op de pagina kan gewoon in CSS. Of in JS als je meer controle wilt.</li>
+                                    <li>Reduced motion: in plaats van animaties uitzetten voor iedereen, zet je ze standaard uit en enhanced je voor mensen die het prima vinden. Dat vind ik een slimmere manier van denken.</li>
+                                    <li>Scroll margin zodat een element niet achter een vaste header verdwijnt wanneer je ernaar linkt.</li>
+                                    <li>Het target-element highlighten met <code>:target</code> zodat duidelijk is waar je naartoe gescrolld bent.</li>
+                                    <li>Het <code>&lt;details&gt;</code> en <code>&lt;summary&gt;</code> element voor accordions, gewoon met HTML. Zoals deze dropdowns!</li>
+                                </ul>
+                                <pre><code>/* Smooth scroll alleen voor mensen zonder motion preference */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}</code></pre>
+                                <pre><code>/* Scroll margin zodat content niet achter header verdwijnt */
+#my-target {
+    scroll-margin-top: 100px;
+}</code></pre>
+                                <pre><code>/* Element highlighten wanneer ernaar gescrolld wordt */
+#my-target:target {
+    outline: 10px solid deeppink;
+    transition: 1s ease-in-out outline;
+}</code></pre>
+                            </div>
+                        </details>
+
+                        <!-- Peter Paul Koch -->
+                        <details>
+                            <summary>Peter Paul Koch  |  Geschiedenis van de browser  |  19 feb</summary>
+                            <div class="nerd-content">
+                                <p>Peter Paul Koch (ppk) is een van de mensen die het web echt heeft gevormd. Hij beheerde jarenlang quirksmode.org, een site vol met documentatie over hoe verschillende browsers zich anders gedroegen. In een tijd dat IE6 de dienst uitmaakte en browsers nauwelijks overweg konden met elkaar, was dat een onmisbare bron voor elke developer.</p>
+                                <p>Zijn talk ging over de geschiedenis van de browser: van Mosaic en Netscape naar de browser wars met Internet Explorer, en hoe Firefox en later Chrome het speelveld opnieuw hebben opengebroken. Het was interessant om te horen hoe lang het heeft geduurd voordat browsers het eens werden over web standards, en hoeveel werk er is gaan zitten in browser-compatibiliteit.</p>
+                                <p>Wat ik interessant vond:</p>
+                                <ul>
+                                    <li>Hoe de browser wars (IE vs Netscape) ervoor zorgden dat developers dezelfde site soms twee keer moesten bouwen.</li>
+                                    <li>Dat ppk zelf lang bijhield welke CSS en JS features in welke browser werkten, omdat er gewoon geen andere betrouwbare bron was.</li>
+                                    <li>Dat de opkomst van de smartphone de browser opnieuw door elkaar schudde: mobile browsers gedroegen zich weer heel anders.</li>
+                                    <li>Hoe langzaam het gaat voordat iets een standaard wordt, en hoe snel dingen daarna opeens overal beschikbaar zijn.</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <!-- Nils Binder -->
+                        <details>
+                            <summary>Nils Binder  |  9elements  |  4 maart</summary>
+                            <div class="nerd-content">
+                                <p>Nils werkt bij 9elements in Bochum, Duitsland (ongeveer 2,5 uur rijden). Ze doen communication design, web development en product development. Wat me aansprak is dat hij zowel creatieve websites maakt als UX-werk doet, inclusief right-to-left design. Hij is dus niet alleen de CSS-nerd die coole animaties maakt maar denkt ook echt na over design als geheel.</p>
+                                <p>Een punt dat me echt is bijgebleven: hij was op de CSS Day in 2023 en had daarna het gevoel dat de web development wereld verdeeld is in twee groepen. Mensen die creatief en experimenteel mogen bouwen op hun eigen projecten, en mensen die in een groot bedrijf zitten en alleen maar bezig zijn met boring geoptimaliseerde marketing-gedreven dingen. Dat hoeft niet zo te zijn, en hij liet zien hoe je ook in een agency context creatief kunt werken.</p>
+                                <p>Wat ik interessant vond:</p>
+                                <ul>
+                                    <li>De "holy triangle of boring": Figma, ChatGPT, Tailwind. Hij zei het een beetje grappig maar het zit er wel in: als je alleen die drie gebruikt, ziet alles er hetzelfde uit.</li>
+                                    <li>Steps function in CSS animaties kende ik nog niet. Daarmee maak je animaties die niet vloeiend maar in stappen gaan, wat voor pixel-achtige effecten heel handig is.</li>
+                                    <li>Zijn standpunt over video's op websites: liever animaties of iets anders, want video's zijn onhandig op telefoons en leveren veel werk op voor de client. Dat vind ik een interessante afweging.</li>
+                                    <li>Dingen die AI niet kan vervangen: animeren, creatief denken, en niet alleen reusable components stapelen maar juist iets unieks maken. Wel dingen als view transitions gebruiken.</li>
+                                    <li>9elements is welkom en hebben een flat voor bezoekers.</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <!-- Rijk van Zanten -->
+                        <details>
+                            <summary>Rijk van Zanten  |  Directus CTO</summary>
+                            <div class="nerd-content">
+                                <p>Rijk is de CTO van Directus en heeft 10 jaar geleden ook de Web Dev Minor gedaan. Nu woont hij in Amerika. Zijn talk was een beetje anders dan de andere: minder technisch, meer een verhaal over hoe zijn carriere is gelopen en wat hij heeft meegemaakt.</p>
+                                <p>Wat ik interessant vond:</p>
+                                <ul>
+                                    <li>Immigreren naar Amerika is echt geen grapje. Er komt heel veel bij kijken en het is lang niet zo makkelijk als het soms lijkt.</li>
+                                    <li>Een bedrijf runnen is ook iets waar veel bij komt kijken, dingen die je als buitenstaander niet ziet.</li>
+                                    <li>Het was motiverend om te horen dat iemand die precies dezelfde minor heeft gedaan nu CTO is van een bekend open source project. Dat laat zien waar het naartoe kan gaan.</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <!-- Robbert Boersema en Marjolein -->
+                        <details>
+                            <summary>Robbert Boersema &amp; Marjolein  |  Formulieren maken  |  12 maart</summary>
+                            <div class="nerd-content">
+                                <p>Robbert en Marjolein zijn de mensen achter Frameless en werken mee aan het NL Design System. Hun talk sloot precies aan bij mijn Browser Technologies project: een formulier bouwen dat goed werkt voor iedereen. Ze liepen door een soort checklist heen van wat een goed formulier maakt, van opbouw tot validatie tot toegankelijkheid voor screenreaders.</p>
+                                <p>Wat ik interessant vond:</p>
+                                <ul>
+                                    <li>Verplichte velden consequent markeren en uitleggen waarom je specifieke informatie vraagt. Bijv bij telefoonnummer: schrijf erbij dat iemand gebeld of gesms't kan worden, want voor een dove persoon is bellen geen optie.</li>
+                                    <li>Fouten niet alleen met een rode rand aangeven maar ook met tekst en een icoon. Kleur alleen is niet genoeg.</li>
+                                    <li>Knoppen zoals "Volgende" aan het begin van de regel zetten, niet aan het einde. Dat is beter voor mensen met tunnelvisie.</li>
+                                    <li>Elk invoerveld heeft een zichtbaar label boven het veld. Alleen bij de zoekfunctie mag je eventueel alleen een placeholder gebruiken.</li>
+                                    <li>Met <code>aria-describedby</code> koppel je beschrijvingen en foutmeldingen aan een veld zodat een screenreader ze voorleest.</li>
+                                    <li><code>inline-start</code> en <code>block-start</code> gebruiken in plaats van <code>width</code> en <code>height</code>, want dat werkt beter voor right-to-left talen.</li>
+                                    <li>Voorkomen dat vertaalsoftware de ingevulde gegevens van de gebruiker vertaalt met <code>&lt;bdi translate="no"&gt;</code>. Dat kende ik echt niet.</li>
+                                    <li>Vermijd vermelden hoe lang het formulier duurt om in te vullen: veel mensen zijn daar niet blij mee.</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <!-- Rosa -->
+                        <details>
+                            <summary>Rosa  |  Hacken  |  2 april</summary>
+                            <div class="nerd-content">
+                                <p>Rosa heeft een master Experimental Publishing gedaan en bouwt zelf dingen, haalt printers uit elkaar en host het (un)repair-cafe in Rotterdam. Haar definitie van een hacker: iemand die skilled is in informatietechnologie en op een onstandaard manier dingen bereikt. Dat vind ik een mooie manier om het te omschrijven.</p>
+                                <p>Haar talk ging over controle over je eigen digitale spullen: zelf een CMS bouwen, je eigen server hosten, een backend draaien op Google Sheets, en zo min mogelijk afhankelijk zijn van externe partijen.</p>
+                                <p>Wat ik interessant vond:</p>
+                                <ul>
+                                    <li>Planned obsolescence: fabrikanten bouwen hun producten zo dat je er steeds minder bij kan. Een Mercedes die harder rijdt als je meer betaalt, het oplaadsysteem van iPhone. Je wordt steeds afhankelijker zonder dat je het doorhebt.</li>
+                                    <li>"De cloud" wordt altijd gepresenteerd als iets luchtig en fijns. Maar het is gewoon een saaie serverhal, ergens op een sciencepark. Dat framing vond ik grappig en ook wel terecht.</li>
+                                    <li>Haar vraag "Bestaat mijn website nog wel over 10 jaar?" en "Kan mijn website bezocht worden door oude systemen?" zijn vragen die ik me daarvoor nooit had gesteld. Ze dwingen je na te denken over duurzaamheid van het web.</li>
+                                    <li>Ze werkt aan prikbord.page en vindt het leuk om mensen een eerste hands-on ervaring te geven met zelf iets maken. DIY-cultuur toepassen op het web.</li>
+                                    <li>Idee: een eigen server beginnen met de minor. Linux installeren, YunoHost, je eigen websites hosten. Klinkt als iets wat ik ooit wil proberen.</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <!-- John Huijkman -->
+                        <details>
+                            <summary>John Huijkman  |  Toegankelijkheid  |  9 april</summary>
+                            <div class="nerd-content">
+                                <p>John heeft 16 jaar bij Q42 gewerkt en is recentelijk overgestapt naar Stichting Accessibility. Zijn talk sloot goed aan bij mijn HCD project: hij liet drie korte filmpjes zien van echte gebruikers die met toegankelijkheidsproblemen te maken hebben op het web.</p>
+                                <p>Wat ik interessant vond:</p>
+                                <ul>
+                                    <li>Martijn is slechtziend en moet altijd ver inzoomen. Veel websites zijn daarvoor niet gemaakt. Wat voor hem belangrijk is: schaalbaarheid, contrast, gerelateerde informatie bij elkaar, en een zichtbare focusrand.</li>
+                                    <li>Naduah heeft mobiliteitsproblemen en is prikkelgevoelig en heeft last van migraine. Ze heeft haar laptop altijd op de laagste helderheid en haar telefoon altijd in dark mode. Veel informatie tegelijk, velle kleuren en animaties zijn voor haar vervelend. Dat geeft te denken over hoe je animaties en drukte op een pagina aanpakt.</li>
+                                    <li>Gideo heeft autisme. Dingen die zijn bedoeld om aandacht te trekken zoals harde advertenties zorgen voor overlast. Hij heeft een rustige layout nodig.</li>
+                                    <li>Wanneer een afbeelding puur decoratief is, moet je het alt-attribuut leeg laten maar wel aanwezig: <code>&lt;img src="" alt=""&gt;</code>. Dat klinkt simpel maar ik deed het voorheen gewoon weg.</li>
+                                    <li>Zijn drie vragen als hij iets maakt: Wat maakt het voor hem of haar moeilijk? Wat heeft hij of zij nodig? Hoe zou je het makkelijker kunnen maken? Dat is een goede manier om te starten met toegankelijk denken.</li>
+                                    <li>Zijn aanpak: ervaar het zelf, laat anderen het ervaren, pas aan. Herhaal. Dat is eigenlijk precies wat we bij HCD ook deden met Ihab.</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                    </div>
+                </section>
+
             </main>
             <div class="scrollbar"></div>
         </div>
 
-        <!-- Laatste project: alleen vorig -->
         <div class="panel-nav">
             <a href="hcd.html">
                 <button class="btn">&#8592; Vorig project</button>
             </a>
-            <span></span>
+            <a href="leerdoelen.html">
+                <button class="btn">Volgend project &#8594;</button>
+            </a>
         </div>
 
     </div>

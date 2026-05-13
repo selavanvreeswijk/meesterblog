@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leerdoelen | Minecraft Portfolio</title>
+    <title>Gesprek 2 | Minecraft Portfolio</title>
     <script src="./js/theme-init.js"></script>
     <link href="./css/styles.css" rel="stylesheet">
     <link href="./css/project.css" rel="stylesheet">
@@ -16,26 +16,135 @@
 
         <div class="panel-header">
             <div class="tab">
-                <span>Leerdoelen</span>
+                <span>Gesprek 2</span>
             </div>
             <a href="werelden.html" class="panel-close">&#10005;</a>
         </div>
 
-        <main>
+        <div class="scroll-wrap">
+            <main>
+
+                <h1>Gesprek 2</h1>
+
+                <section>
+                    <h2>Weekly Nerds: wat neem ik mee?</h2>
+                    <p>De Weekly Nerds waren een goede manier om uit de projectbubbel te stappen en breder te kijken. Een paar dingen zijn me echt bijgebleven en wil ik meenemen:</p>
+                    <p>Van Killian Valkhof: de CSS-first mindset. Ik ga bewuster nadenken of iets echt JavaScript nodig heeft of dat HTML of CSS het ook kan. Zijn aanpak van reduced motion, waarbij je animaties standaard uitzet en ze enhanced voor mensen die ze willen, ga ik voortaan standaard toepassen.</p>
+                    <p>Van Robbert en Marjolein: formulieren toegankelijk maken. Ik heb bij BT al veel hiervan in de praktijk gebracht, maar de details zoals <code>aria-describedby</code> en <code>bdi translate="no"</code> wist ik nog niet. Die ga ik onthouden.</p>
+                    <p>Van Rosa: nadenken over de houdbaarheid van wat ik bouw. Bestaat mijn website nog over 10 jaar? Kan hij op een oud apparaat? Die vragen stel ik me nu wel.</p>
+                    <p>Van John Huijkman: begin met echte mensen. Zijn drie vragen staan nu in mijn hoofd als ik iets bouw: Wat maakt het moeilijk? Wat heeft iemand nodig? Hoe maak ik het makkelijker?</p>
+                </section>
+
+                <section>
+                    <h2>Uitkomsten per vak</h2>
+
+                    <div class="weekly-nerds">
+
+                        <details>
+                            <summary>Sprint 0 | Persoonlijke portfolio</summary>
+                            <div class="nerd-content">
+                                <p>Sprint 0 was de kickstart van de minor en meteen een goede manier om te snappen wat we de komende maanden gingen doen. Mijn inbreng was een portfolio met horizontale scroll, twee thema's en een typewriter-animatie voor de introductietekst. Ik heb de klasgenoten ingeladen via de API van de minor.</p>
+                                <p>Wat ik nieuw heb geleerd: <code>clamp()</code> voor responsive design zonder media queries. Ik was verbaasd hoe elegant dat werkt en gebruik het nu overal. Ook de Fetch API heb ik voor het eerst echt gebruikt.</p>
+                                <p>Nieuw inzicht: ik ben te laat begonnen met testen op andere schermformaten. De horizontale scroll werkte niet overal goed. Voortaan ga ik dat eerder checken.</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Browser Technologies | Erfenisformulier</summary>
+                            <div class="nerd-content">
+                                <p>Dit was het vak waarbij mijn manier van denken het meest is verschoven. Progressive enhancement betekent: begin met wat altijd werkt (HTML) en voeg daarna verbeteringen toe. Ik had altijd andersom gedacht.</p>
+                                <p>Mijn inbreng: een meerstaps erfenisformulier in NS-huisstijl dat ook zonder JavaScript werkt. Progressive disclosure zodat velden pas zichtbaar worden als ze relevant zijn, en de <code>startViewTransition</code> API voor vloeiende overgangen tussen stappen.</p>
+                                <p>Nieuw inzicht: HTML5 constraint validation is krachtiger dan ik dacht. En toegankelijkheid is geen extraatje, het is gewoon de basis. Dat is een mindset-shift die ik de rest van de minor heb meegenomen.</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>CSS to the Rescue | Silly Walk</summary>
+                            <div class="nerd-content">
+                                <p>Dit project was het meest verrassend voor mij. Ik dacht dat CSS een vrij simpele taal was, maar na 2.500+ regels en 16 uitgewerkte combinaties denk ik daar anders over. Geen JavaScript, geen classes, geen ID's. Alleen HTML-elementen en slimme CSS.</p>
+                                <p>Mijn inbreng: een ster met lange benen die een silly walk doet als eerbetoon aan Monty Python. Vier knoppen met elk een eigen stijl en animatie, gecombineerd via container style queries. Ik heb me ook verdiept in Monty Python quotes om de teksten per state aan te passen.</p>
+                                <p>Nieuw inzicht: <code>@layer</code> maakt je code veel overzichtelijker als je veel CSS schrijft. Container style queries zijn ongelofelijk handig voor combinaties van states. En animaties die elkaar overschrijven is een veelvoorkomend probleem waar ik een spreadsheet voor moest maken.</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Hackaton | NEBULA</summary>
+                            <div class="nerd-content">
+                                <p>Vier dagen, een opdrachtgever, een team van vier. Dat was de Meesterschap Hackaton. We bouwden een website voor NEBULA, een satelliet die in 2030 de ruimte in wil. Mijn inbreng was het animatiewerk en de theming: een scroll-animatie waarbij de satelliet om de aarde draait, en twee thema's (aurora en black hole).</p>
+                                <p>We hebben ook easter eggs ingebouwd: een hidden Space Invaders minigame en een nyan cat animatie. Dat soort details maken een website gedenkwaardig.</p>
+                                <p>Nieuw inzicht: samenwerken onder tijdsdruk vereist vertrouwen in elkaars code. Je kunt niet alles zelf willen controleren. Snel beslissen wat er wel en niet in gaat is een vaardigheid op zich. En: een scroll-gebaseerde animatie is complexer dan het eruitziet, maar ook super bevredigend als het klopt.</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>API | Sudoku</summary>
+                            <div class="nerd-content">
+                                <p>Voor dit vak heb ik een Sudoku-app gebouwd met twee APIs: een Sudoku API voor de puzzels en de icanhazdadjoke API voor een grap bij het oplossen. De moeilijkheidsgraad past zich aan op basis van hoe snel je een puzzel oplost. Afgeronde puzzels en statistieken worden bijgehouden in localStorage.</p>
+                                <p>Mijn inbreng: de Drag &amp; Drop API zodat je cijfers kunt slepen in plaats van typen, confetti bij het voltooien en een overzichtspagina met statistieken.</p>
+                                <p>Nieuw inzicht: een weekjournaal bijhouden helpt echt om structuur te houden en terug te blikken. Ik heb ook geleerd hoe touch events werken naast de standaard drag events, wat voor mobiel noodzakelijk is. En: twee APIs combineren is niet ingewikkeld als je de structuur snapt.</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Human Centered Design | Prototype voor Ihab</summary>
+                            <div class="nerd-content">
+                                <p>Dit vak was het meest leerzaam op menselijk niveau. Ik heb een webprototype gebouwd voor Ihab, een blinde gebruiker. Een popup met drie tabs (Quick Scan, Detail en Sfeer) die via de Web Speech API de essentie van een pagina voorleest.</p>
+                                <p>Mijn inbreng: de keuze om te werken met het <code>&lt;dialog&gt;</code> element en <code>showModal()</code> zodat de focus automatisch goed staat voor de screenreader. De Sfeer-tab als speelse toevoeging voor recreatief gebruik, wat Ihab het interessantst vond.</p>
+                                <p>Nieuw inzicht: ontwerpen voor één specifieke persoon leert je meer dan generieke richtlijnen lezen. Elke testsessie met Ihab gaf feedback die ik nooit had bedacht. Het verschil tussen wat jij denkt dat iemand nodig heeft en wat hij daadwerkelijk mist is groot. De Exclusive Design Principles zijn een goed kader om die blinde vlekken kleiner te maken.</p>
+                            </div>
+                        </details>
+
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Reflectie</h2>
+                    <p>Als ik terugkijk op de minor tot nu toe, ben ik blij met wat ik heb gemaakt en geleerd. Mijn grootste leermoment is de mindset-shift bij Browser Technologies: eerst bouwen voor wat altijd werkt, dan verbeteren. Dat klinkt simpel maar het vereist echt anders denken.</p>
+                    <p>Ik ben het meest trots op CSS to the Rescue. Van niet weten wat ik wilde maken naar 2.500+ regels CSS en 16 werkende combinaties. Dat had ik mezelf vooraf niet toegedacht. En bij HCD: het moment dat Ihab in de tweede test enthousiaster was over mijn prototype dan de eerste keer. Dat voelde echt goed.</p>
+                    <p>Wat nog lastig is: de balans bewaren tussen ambitie en haalbaarheid. Ik neem me soms te veel voor in een week en dan loopt het project achter op schema. Bij HCD heb ik ook een testmoment gemist door omstandigheden, dat heeft me geleerd dat ik meer buffer moet inbouwen. En ik merk dat ik JavaScript nog wil verbeteren: ik kom er vaak wel uit maar het is niet altijd even netjes of efficiënt.</p>
+                </section>
+
+                <section>
+                    <h2>Drie leerdoelen voor de meesterproef</h2>
+
+                    <div class="weekly-nerds">
+
+                        <details>
+                            <summary>1 | JavaScript kwaliteit</summary>
+                            <div class="nerd-content">
+                                <p>Ik wil mijn JavaScript netter schrijven. Op dit moment werkt mijn code, maar ik merk dat ik soms te veel in één bestand gooi of functies schrijf die te lang zijn. Ik wil leren hoe ik code beter kan opdelen en leesbaar kan houden voor iemand anders.</p>
+                                <p>Hoe ik hieraan ga werken: per feature een aparte functie of bestand, variabelen en functies duidelijk benoemen en tussendoor code reviewen door het hardop te lezen. Ik wil ook kijken naar hoe andere mensen hun JS structureren in projecten die ik op GitHub tegenkom.</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>2 | Toegankelijkheid vanaf het begin</summary>
+                            <div class="nerd-content">
+                                <p>Bij de meeste projecten heb ik toegankelijkheid er achteraf bijgedaan. Ik wil het omdraaien: beginnen met semantische HTML, labels, focus management en contrast als basis, en pas daarna het visuele design eroverheen leggen.</p>
+                                <p>Hoe ik hieraan ga werken: een checklist bijhouden van basale toegankelijkheidspunten (alt-teksten, labels, tabvolgorde, kleurcontrast) die ik aan het begin van elk component doorloop. En minimaal één keer per project door het ontwerp heen met alleen het toetsenbord.</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>3 | Scope bewaken</summary>
+                            <div class="nerd-content">
+                                <p>Ik heb de neiging om ideeën steeds groter te maken dan de tijd toelaat. Dan loop ik aan het einde van een project tegen dingen aan die ik niet meer af krijg, of ik geef een feature minder aandacht dan hij verdient. Ik wil leren om een realistisch plan te maken en me daar ook aan te houden.</p>
+                                <p>Hoe ik hieraan ga werken: aan het begin van de meesterproef een prioriteitenlijst opstellen met een must-have en een nice-to-have. De must-haves komen eerst af, en de nice-to-haves alleen als er tijd over is. Ik ga ook wekelijks checken of ik nog op schema lig.</p>
+                            </div>
+                        </details>
+
+                    </div>
+                </section>
+
+            </main>
             <div class="scrollbar"></div>
+        </div>
 
-            <h1>Leerdoelen</h1>
-
-            <section>
-                <h2>Mijn leerdoelen</h2>
-                <p>Hier komen mijn persoonlijke leerdoelen voor de minor Web Design &amp; Development...</p>
-            </section>
-
-            <section>
-                <h2>Reflectie</h2>
-                <p>Hier komt mijn reflectie op de leerdoelen...</p>
-            </section>
-        </main>
+        <div class="panel-nav">
+            <a href="weeklynerd.html">
+                <button class="btn">&#8592; Vorig project</button>
+            </a>
+        </div>
 
     </div>
 
