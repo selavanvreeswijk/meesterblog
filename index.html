@@ -16,9 +16,8 @@
 
     <header>
         <h1>Minor Web Design and Development</h1>
+        
         <h2>Sela van Vreeswijk</h2>
-
-        <!-- ::after van maken <p>Dit is die gele tekst!</p> -->
     </header>
 
     <main>
@@ -32,7 +31,9 @@
             </a>
 
             <div class="btn-row">
-                <button class="btn" onclick="location.href='settings.html'">Instellingen...</button>
+                <a href="settings.html">
+                    <button class="btn">Instellingen...</button>
+                </a>
                 <button class="btn" id="quit-btn" onclick="quitGame()">Quit game</button>
             </div>
         </div>
@@ -43,5 +44,6 @@
         <p>Copyright Sela van Vreeswijk. Do not distribute!</p>
     </footer>
     <script src="./js/creeper.js"></script>
+    <script src="./js/sound.js"></script>
 </body>
 </html>

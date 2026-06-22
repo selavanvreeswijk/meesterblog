@@ -73,20 +73,25 @@
                                     <li>Het <code>&lt;details&gt;</code> en <code>&lt;summary&gt;</code> element voor accordions, gewoon met HTML. Zoals deze dropdowns!</li>
                                 </ul>
                                 <pre><code>/* Smooth scroll alleen voor mensen zonder motion preference */
-@media (prefers-reduced-motion: no-preference) {
-    html {
-        scroll-behavior: smooth;
-    }
-}</code></pre>
+                                    @media (prefers-reduced-motion: no-preference) {
+                                        html {
+                                            scroll-behavior: smooth;
+                                        }
+                                    }
+                                </code></pre>
+
                                 <pre><code>/* Scroll margin zodat content niet achter header verdwijnt */
-#my-target {
-    scroll-margin-top: 100px;
-}</code></pre>
+                                    #my-target {
+                                        scroll-margin-top: 100px;
+                                    }
+                                </code></pre>
+
                                 <pre><code>/* Element highlighten wanneer ernaar gescrolld wordt */
-#my-target:target {
-    outline: 10px solid deeppink;
-    transition: 1s ease-in-out outline;
-}</code></pre>
+                                    #my-target:target {
+                                        outline: 10px solid deeppink;
+                                        transition: 1s ease-in-out outline;
+                                    }
+                                </code></pre>
                             </div>
                         </details>
 
@@ -190,6 +195,34 @@
                             </div>
                         </details>
 
+                        <!-- Hans de Zwart -->
+                        <details>
+                            <summary>Hans de Zwart  |  Privacy  |  21 mei</summary>
+                            <div class="nerd-content">
+                                <p>We begonnen met een oefening: aan een kant van de ruimte staan als je niks te verbergen hebt, aan de andere kant als je veel te verbergen hebt. Daarna keken we een video waarin straatinterviewer "vonpop" mensen vraagt of ze iets te verbergen hebben. Bijna iedereen zegt "nee, ik heb niks te verbergen", maar zodra hij vraagt naar je pincode of je adres met huisnummer, willen mensen die informatie alsnog niet geven. Dat liet meteen zien hoe relatief privacy eigenlijk is.</p>
+                                <p>Hans legde uit dat privacy uit drie kanten te bekijken is: als individueel recht (met rust gelaten worden, jezelf kunnen zijn), als sociaal recht (wat je deelt verschilt per context) en als democratische noodzaak (autonoom je mening kunnen vormen). Wat je wel en niet deelt verschilt enorm per situatie: met je dokter deel je dingen die je met niemand anders deelt, en met vrienden gedraag je je anders dan thuis met familie.</p>
+                                <p>Wat ik interessant vond:</p>
+                                <ul>
+                                    <li>Helen Nissenbaum noemt privacy "contextuele integriteit": het probleem is niet dat iets gedeeld wordt, maar dat het op een onverwachte manier bij een onverwachte partij terechtkomt. Bijvoorbeeld als de bakker een foto van je maakt en die op Snapchat zet.</li>
+                                    <li>Privacy is geen absoluut ding, het is altijd afhankelijk van de context.</li>
+                                    <li>De AVG is eigenlijk common sense over hoe je met elkaars gegevens zou moeten omgaan, vastgelegd in wetgeving.</li>
+                                    <li>Toestemming moet vrij en geïnformeerd zijn, en moet altijd ingetrokken kunnen worden. Daarnaast mag je gegevens ook verwerken als dat wettelijk verplicht is, of bij een gerechtvaardigd belang (bijvoorbeeld als je je beroep anders niet kan uitoefenen).</li>
+                                    <li>Om aan de wet te voldoen moet je dataminimalisatie toepassen: zo min mogelijk gegevens verwerken van mensen.</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                        <!-- The Web You Want -->
+                        <details>
+                            <summary>The Web You Want  |  Leonie Watson, Cyd Stumpel &amp; Sarah  |  10 juni</summary>
+                            <div class="nerd-content">
+                                <p>Deze sessie bestond uit drie korte talks van verschillende sprekers, allemaal vanuit hun eigen visie op "het web dat ze willen".</p>
+                                <p><strong>Leonie Watson</strong> is blind, maar is dat niet altijd geweest, en houdt van AI. Ze liet zien hoe lange documenten vaak geen headings hebben en hoe afbeeldingen op webshops vaak geen omschrijving hebben, waar AI nu bij helpt door betere omschrijvingen te genereren. Ook gebruikt ze de Ray-Ban Meta glasses om dingen om haar heen accuraat omschreven te krijgen, en object identification met barcodes om producten te herkennen. Een retail agent helpt haar bijvoorbeeld met het uitzoeken van kleding: hoe het eruitziet, van welk materiaal het is en wat de reviews zijn. Haar punt: AI compenseert voor waar het web heeft gefaald, maar het is niet het web dat faalt, het zijn wij als mensen die het web niet zo toegankelijk maken als het zou kunnen zijn. Accessibility is resistance.</p>
+                                <p><strong>Cyd Stumpel</strong> wil een web met beweging erin. Ze ging in op popovers, <code>prefers-reduced-motion</code> en clip-paths, en gaf het advies om de komende maanden weer wat tijd te steken in het herleren van de basics, vooral met AI in je achterhoofd.</p>
+                                <p><strong>Sarah</strong>, die onder de naam Whimsically werkt en al sinds 1999 websites bouwt, mist het oude web: blogrolls, guestbooks, en de community-sfeer van toen. Ze noemde sites zoals Neocities waar je nog oude webpagina's van mensen kunt vinden. Haar stelling: we zijn collectief vergeten hoe je het web eigenlijk moet doorzoeken.</p>
+                            </div>
+                        </details>
+
                     </div>
                 </section>
 
@@ -209,5 +242,6 @@
     </div>
 
     <script src="./js/project.js"></script>
+    <script src="./js/sound.js"></script>
 </body>
 </html>

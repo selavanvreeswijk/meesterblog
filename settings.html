@@ -15,8 +15,26 @@
     <h1>Opties</h1>
 
     <div class="settings-grid">
-        <button class="btn" id="btn-standaard" onclick="setTheme('default')">Thema: Standaard</button>
-        <button class="btn" id="btn-underworld" onclick="setTheme('underworld')">Thema: Nether</button>
+        <button class="theme-card" data-theme="default" onclick="setTheme('default')">
+            <img src="./images/background.png" alt="Thema Normaal" class="theme-thumb">
+            <span>Normaal</span>
+        </button>
+        <button class="theme-card" data-theme="underworld" onclick="setTheme('underworld')">
+            <img src="./images/background-nether.png" alt="Thema Nether" class="theme-thumb">
+            <span>Nether</span>
+        </button>
+        <button class="theme-card" data-theme="jungle" onclick="setTheme('jungle')">
+            <img src="./images/background-jungle.png" alt="Thema Jungle" class="theme-thumb">
+            <span>Jungle</span>
+        </button>
+        <button class="theme-card" data-theme="desert" onclick="setTheme('desert')">
+            <img src="./images/background-desert.png" alt="Thema Desert" class="theme-thumb">
+            <span>Desert</span>
+        </button>
+        <button class="theme-card" data-theme="iceland" onclick="setTheme('iceland')">
+            <img src="./images/background-iceland.png" alt="Thema Iceland" class="theme-thumb">
+            <span>Iceland</span>
+        </button>
     </div>
 
     <a href="index.html">
@@ -24,5 +42,6 @@
     </a>
 
     <script src="./js/theme.js"></script>
+    <script src="./js/sound.js"></script>
 </body>
 </html>

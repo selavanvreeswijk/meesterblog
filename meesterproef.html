@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 08: Meesterproef: TAVI | Minecraft Portfolio</title>
+    <script src="./js/theme-init.js"></script>
+    <link href="./css/styles.css" rel="stylesheet">
+    <link href="./css/project.css" rel="stylesheet">
+    <link rel="icon" href="./images/favicon.png">
+</head>
+
+<body>
+    <div class="panel">
+
+        <div class="panel-header">
+            <div class="tab">
+                <span>Project 08: Meesterproef: TAVI</span>
+            </div>
+            <a href="werelden.html" class="panel-close">&#10005;</a>
+        </div>
+
+        <div class="scroll-wrap">
+            <main>
+
+                <h1>Project 08: TAVI, Toegankelijk Amsterdam Voor Iedereen</h1>
+
+                <section>
+                    <h2>Project omschrijving</h2>
+                    <p>Voor mijn meesterproef heb ik samen met Xavannah, Louise en Luna Jay in opdracht van de Gemeente Amsterdam (Niels van Leenen en Gizing Khalandi) gewerkt aan TAVI: een webapplicatie die mensen met een fysieke beperking of andere toegankelijkheidsbehoeften helpt om toegankelijke gebouwen in Amsterdam te vinden. Coach: Victor.</p>
+                    <p>Het concept is gedurende het project flink veranderd. We begonnen met een routeplanner, maar na feedback van de opdrachtgever verschoof de focus naar het tonen en filteren van toegankelijke locaties op een kaart. De app is uiteindelijk gebouwd met Astro, Leaflet, de Geolocation API en een database van de Gemeente Amsterdam.</p>
+
+                    <div class="project-links">
+                        <a href="https://github.com/selavanvreeswijk/routeplanner-gemeenteamsterdam" target="_blank">
+                            <button class="btn">GitHub</button>
+                        </a>
+                        <a href="https://tavi-6dj3.onrender.com/" target="_blank">
+                            <button class="btn">Website</button>
+                        </a>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Plannen, ontwikkelingen en reflecties</h2>
+
+                    <div class="weekly-nerds">
+
+                        <details>
+                            <summary>Week 1: Het project begrijpen en de opdrachtgever ontmoeten</summary>
+                            <div class="nerd-content">
+                                <p>Eerlijk gezegd had ik dit project niet in mijn top 3 keuzes staan, wat het in het begin lastig maakte om me er volledig in te gooien. Ik heb die eerste dagen de opdracht goed proberen te begrijpen en vragen voorbereid voor de opdrachtgever. We hadden ook een eerste coachingsgesprek met Victor bij de Voorhoede, wat hielp om richting te geven. In het eerste gesprek met Niels van Leenen nam ik de aantekeningen, wat voor mij een goede manier was om alles te verwerken en te begrijpen wat er precies verwacht werd.</p>
+
+                                <h4>Wireframes en inspiratie</h4>
+                                <p>We zijn allemaal gelijk begonnen met het maken van wireframes. Om inspiratie op te doen heb ik gekeken naar bestaande routeplanners en kaartapplicaties: 9292, NS, Apple Maps en Google Maps. Wat me opviel was hoe zij de zoekbalk, de kaart en de routeinformatie ten opzichte van elkaar positioneren. Die hiërarchie heb ik meegenomen in mijn eigen schetsen.</p>
+
+                                <h4>Toelichting op de wireframes</h4>
+                                <p>De wireframes zijn opgezet als een flow van vier stappen:</p>
+                                <p><strong>Stap 1, route invoeren:</strong> de gebruiker vult een vertrekpunt en bestemming in. Opgeslagen adressen en suggesties in de buurt maken dit sneller en laagdrempeliger.</p>
+                                <p><strong>Stap 2, profiel en filters:</strong> de gebruiker kiest een profiel dat bij zijn situatie past, zoals rolstoelgebruiker, mindervalide of tijdelijke beperking. Daaronder kan hij extra voorkeuren instellen zoals geen trappen, brede paden of toegankelijk OV.</p>
+                                <p><strong>Stap 3, live route:</strong> de route wordt getoond op een kaart, met verschillende opties (snelste, minst lopen, alleen lopen). Onderaan is direct te zien hoe lang de reis duurt en of de route volledig toegankelijk is.</p>
+                                <p><strong>Stap 4, halte-detail:</strong> per halte of locatie is gedetailleerde toegankelijkheidsinformatie te zien, zoals of er een lage-vloer tram is, een verlaagd perron of een geleidingslijn.</p>
+                                <p>De keuze om het als een stappenflow te ontwerpen was bewust: door de gebruiker niet meteen te overweldigen met alle opties, maar hem stap voor stap te begeleiden, wordt de app toegankelijker, ook in de manier waarop je hem gebruikt.</p>
+
+                                <h4>Van styling naar JavaScript</h4>
+                                <p>We hebben het project opgezet met Astro-componenten, op basis van workshops die Jad en Louise hadden gevolgd. Ik heb mijn Figma-bestand gedeeld zodat we gezamenlijk het ontwerp konden aanpassen en verfijnen.</p>
+                                <p>In eerste instantie pakte ik de styling van dit project op, maar ik realiseerde me dat een van mijn leerdoelen juist JavaScript is. Ik heb bewust de keuze gemaakt om van taak te wisselen met Louise. Zij nam de styling over, ik ging aan de slag met JavaScript.</p>
+                                <p>Ik ben begonnen met Leaflet, een open-source bibliotheek voor interactieve kaarten. Ik had hier nog nooit mee gewerkt en ben gestart met de officiële quickstart tutorial. Stap voor stap heb ik de kaart werkend gekregen en daarna markers toegevoegd. Daarna heb ik een route ingeladen via OpenRouteService op basis van coördinaten. Dit kostte meer tijd dan verwacht, maar aan het einde stond er iets op het scherm. De kaart was nog lang niet gestyled, maar het werkte.</p>
+
+                                <h4>Eerste presentatie en feedback</h4>
+                                <p>Aan het einde van de week hebben we een presentatie gegeven bij een gebouw van de gemeente. De opdrachtgevers waren positief over de styling, maar wilden het concept aanpassen: de route moest een lagere prioriteit krijgen en de focus moest verschuiven naar de toegankelijkheid van gebouwen zelf. Een grote bijstelling, die betekende dat we de week erna ons hele concept moesten aanpassen.</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Week 2: Concept opnieuw uitwerken</summary>
+                            <div class="nerd-content">
+                                <p>Aan het begin van de week heb ik meegewerkt aan het bijstellen van het concept en het bijwerken van de designrationale. We hadden ook een coachsessie met Victor, die ons hielp om even een stapje terug te doen en het grotere plaatje te zien.</p>
+
+                                <h4>Geolocation API implementeren</h4>
+                                <p>Ik heb deze week de Geolocation API geïmplementeerd om de huidige locatie van de gebruiker op de kaart te tonen. Ik wist in grote lijnen hoe het moest werken, maar de implementatie in ons project vroeg wat uitzoekwerk. Uiteindelijk heb ik het werkend gekregen met behulp van de MDN-documentatie.</p>
+                                <p>Ik ben ook begonnen met de zoekbalk, maar kreeg dit niet helemaal af binnen de week. Aan het einde begreep ik wel hoe de logica werkte, wat genoeg vertrouwen gaf om de volgende week verder te gaan.</p>
+                                <p>Aan het einde van de week hadden we een online meeting met de gemeente, waarbij we ons bijgestelde concept en prototype lieten zien.</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Week 3: Profiel, responsive design en extra functies</summary>
+                            <div class="nerd-content">
+                                <h4>Profielfunctie met localStorage</h4>
+                                <p>Deze week heb ik een profielfunctie gebouwd. De gedachte was: voordat de gebruiker de kaart ziet, vult hij eerst zijn naam in en kiest hij zijn beperking. Deze feedback hebben we vanuit de opdrachtgever doorgekregen. Die informatie wordt opgeslagen in localStorage, zodat het ook op de volgende pagina's beschikbaar is en de gebruiker persoonlijk aangesproken wordt.</p>
+                                <p>Dit was de eerste keer dat ik localStorage zelf implementeerde. Het vroeg wat uitzoekwerk om de data goed op te slaan en weer op te halen, maar uiteindelijk werkte het.</p>
+
+                                <h4>Responsive design, printfunctie en favicon</h4>
+                                <p>Ik heb de website responsive gemaakt met behulp van <code>clamp()</code> in CSS, zodat tekst en elementen vloeiend meeschalen tussen schermformaten. Ook heb ik een desktopversie opgezet, een printfunctie en een deelfunctie toegevoegd en de favicon en naam van de app uitgewerkt.</p>
+                                <p>Het afronden van de responsiveness voor grotere schermen kostte meer tijd dan gepland, omdat ik veel merge conflicten moest oplossen in Git. Meerdere mensen werkten tegelijk aan dezelfde bestanden, wat steeds tot botsingen leidde. Frustrerend, maar ik heb er wel van geleerd hoe je conflicten systematisch aanpakt en hoe belangrijk goede afspraken zijn over wie aan welk bestand werkt.</p>
+                            </div>
+                        </details>
+
+                        <details>
+                            <summary>Week 4 &amp; 5: Profiel verfijnen en toegankelijkheid</summary>
+                            <div class="nerd-content">
+                                <h4>Profiel aanpassen op basis van feedback</h4>
+                                <p>Deze week heb ik verder gewerkt aan de profieloverlay. We kregen als feedback dat het er anders uit moest zien, onder andere moest de stippellijn een harde lijn worden. Ik heb die aanpassingen doorgevoerd en daarna opnieuw gekeken of het geheel klopte. Nu kan de gebruiker in het profiel aanpassen voor welke beperking ze willen filteren en het contrast en dark-light mode aanpassen.</p>
+
+                                <h4>Toegankelijkheid verbeteren (WCAG)</h4>
+                                <p>Een groot deel van deze week heb ik besteed aan het toegankelijker maken van de applicatie. Per aanpassing heb ik gekeken welke WCAG-richtlijn erbij hoorde en waarom de aanpassing nodig was.</p>
+                                <ul>
+                                    <li><strong>Taal van de pagina ingesteld (WCAG 3.1.1):</strong> ik heb <code>&lt;html lang="en"&gt;</code> aangepast naar <code>&lt;html lang="nl"&gt;</code> in alle drie de pagina's. Dit klinkt klein, maar het zorgt ervoor dat schermlezers de tekst met de juiste Nederlandse uitspraak lezen.</li>
+                                    <li><strong>Labels toegevoegd aan invoervelden (WCAG 1.3.1 / 4.1.2):</strong> het naamveld op de onboarding-pagina en het zoekveld hadden geen <code>&lt;label&gt;</code>. Zonder label weet een schermlezer niet wat het veld betekent. Ik heb visueel verborgen labels toegevoegd met de class <code>sr-only</code>, zodat het ontwerp er niet door verandert maar de toegankelijkheid wel verbetert.</li>
+                                    <li><strong>Profielknop van &lt;div&gt; naar &lt;button&gt; (WCAG 4.1.2):</strong> het klikbare profielicoon was een <code>&lt;div&gt;</code>, wat niet toetsenbord-bedienbaar is. Ik heb dit vervangen door een <code>&lt;button&gt;</code> met de juiste ARIA-attributen: <code>aria-label="Open profielmenu"</code>, <code>aria-haspopup="dialog"</code> en <code>aria-expanded</code> die mee-update bij openen en sluiten.</li>
+                                    <li><strong>Popup gemarkeerd als dialoogvenster (WCAG 4.1.2):</strong> de profielpopup heeft <code>role="dialog"</code>, <code>aria-modal="true"</code> en <code>aria-labelledby</code> gekregen. Zonder deze attributen begrijpt een schermlezer niet dat het om een apart modaal venster gaat.</li>
+                                    <li><strong>Decoratieve SVG-iconen verborgen voor schermlezers (WCAG 1.1.1):</strong> alle puur decoratieve iconen hebben <code>aria-hidden="true"</code> gekregen. Anders leest een schermlezer lege of verwarrende SVG-inhoud voor, wat de gebruikerservaring verslechtert.</li>
+                                    <li><strong>&lt;main&gt; landmark toegevoegd (WCAG 1.3.1):</strong> de hoofdinhoud stond in een <code>&lt;div&gt;</code>. Door dit te vervangen door <code>&lt;main&gt;</code> kunnen schermlezers en toetsenbordgebruikers direct naar de hoofdinhoud springen, zonder eerst alle navigatie te moeten doorlopen.</li>
+                                    <li><strong>aria-label op locatielijst (WCAG 1.3.1):</strong> de sectie met locaties had geen toegankelijke naam. Door <code>aria-label="Locaties"</code> toe te voegen kondigt de schermlezer de sectie correct aan.</li>
+                                    <li><strong>aria-live op locatieteller (WCAG 4.1.3):</strong> de teller die het aantal gevonden locaties toont wordt dynamisch bijgewerkt via JavaScript. Zonder extra attribuut hoort een schermlezergebruiker die update niet. Door <code>aria-live="polite"</code> toe te voegen worden wijzigingen automatisch voorgelezen zodra de gebruiker stopt met typen.</li>
+                                </ul>
+                            </div>
+                        </details>
+
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Afbeeldingen</h2>
+                    <div class="img-grid">
+                        <figure>
+                            <img src="./images/meesterproef/thumbnail-meesterproef.png" alt="Thumbnail TAVI">
+                            <figcaption>De TAVI webapplicatie</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./images/meesterproef/figma.png" alt="Figma ontwerp">
+                            <figcaption>Het gedeelde Figma-bestand</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./images/meesterproef/route.png" alt="Eerste Leaflet kaart">
+                            <figcaption>Eerste werkende route met Leaflet</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./images/meesterproef/kaart.png" alt="Een kaart met detailpagina">
+                            <figcaption>Een locatie detailpagina</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./images/meesterproef/profiel.png" alt="Profieloverlay">
+                            <figcaption>De profieloverlay met filters</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="./images/meesterproef/responsive.png" alt="Responsive desktopversie">
+                            <figcaption>Desktopversie met responsive design</figcaption>
+                        </figure>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Uitkomsten en inzichten</h2>
+                    <p>Voor de presentatie van ons eindproduct aan alle docenten en medestudenten heb ik een poster en sticker ontworpen. Voor de poster vond ik het belangrijk dat men wist waar TAVI over ging en hoe je het kon gebruiken. De stickers vonden we een leuke bijkomstigheid om uit te delen aan mensen en zo TAVI te verspreiden.</p>
+                    <p>Tijdens de eindpresentatie met onze opdrachtgever waren ze heel tevreden over ons eindproduct. We kregen vrijwel nauwelijks feedback over verbeterpunten, maar vooral dat ze er heel blij mee waren en dat we trots mogen zijn op ons eindresultaat.</p>
+                </section>
+
+            </main>
+            <div class="scrollbar"></div>
+        </div>
+
+        <div class="panel-nav">
+            <a href="leerdoelen.html">
+                <button class="btn">&#8592; Vorig project</button>
+            </a>
+            <a href="reflectie.html">
+                <button class="btn">Volgend project &#8594;</button>
+            </a>
+        </div>
+
+    </div>
+
+    <script src="./js/project.js"></script>
+    <script src="./js/sound.js"></script>
+</body>
+</html>
