@@ -1,0 +1,195 @@
+/* --------------------------------------------------------------------------------- MARK: LAYOUT
+*/
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Buitenste container (het 'venster') */
+.panel{
+    display: flex;
+    flex-direction: column;
+
+    width: 50vw;
+    height: 75vh;
+
+    background: var(--panel-bg);
+    color: var(--white);
+}
+
+/* --------------------------------------------------------------------------------- MARK: TAB HEADER
+*/
+
+.panel-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: calc(var(--scale) * 0.6) calc(var(--scale) * 0.8);
+
+    .tab{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        img{
+            display: none;
+        }
+
+        span{
+            font-family: 'Minecraft Heading', sans-serif;
+            font-size: calc(var(--scale) * 1.8);
+            color: var(--white);
+
+            text-shadow:
+                2px 2px 0px var(--gray),
+                4px 4px 0px var(--dark-gray);
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------- MARK: KNOPPEN
+*/
+
+.panel-btns{
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--scale) * 0.8);
+    padding: calc(var(--scale) * 0.8);
+
+    background: rgba(0, 0, 0, 0.3);
+
+    /* Overschrijf de globale a breedte */
+    a{
+        width: auto;
+    }
+
+    #open-btn{
+        flex: 1;
+
+        button{
+            width: 100%;
+        }
+    }
+
+    .btn-terug{
+        button{
+            padding: calc(var(--scale) * 0.85) calc(var(--scale) * 1.2);
+        }
+    }
+}
+
+/* open-btn grijs wanneer niets geselecteerd is */
+.panel-btns #open-btn button{
+    opacity: 0.5;
+}
+
+.panel:has(input:checked) #open-btn button{
+    opacity: 1;
+}
+
+/* --------------------------------------------------------------------------------- MARK: WERELDEN LIJST
+*/
+
+/* Wrapper zodat de scrollbar buiten de scrollbare main staat */
+.scroll-wrap{
+    flex: 1;
+    min-height: 0;
+    position: relative;
+}
+
+main{
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    /* Custom Scrollbar (spin) — staat buiten main in .scroll-wrap */
+}
+
+/* Scrollbar is sibling van main, gepositioneerd binnen .scroll-wrap */
+.scrollbar{
+    position: absolute;
+    right: 2px;
+    top: 2px;
+
+    width: calc(var(--scale) * 3.5);
+    height: calc(var(--scale) * 4);
+    background: url("../images/spider.png") no-repeat center / contain;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.scrollbar.visible{
+    opacity: 1;
+}
+
+    section{
+        margin: calc(var(--scale) * 0.8);
+
+        h2{
+            font-family: 'Minecraft Text', sans-serif;
+            font-size: calc(var(--scale) * 1.2);
+            color: var(--subtekst);
+            margin-bottom: calc(var(--scale) * 0.5);
+        }
+    }
+
+    /* Elke wereld rij */
+    .wereld{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: var(--another-dark-gray);
+        cursor: pointer;
+        margin-bottom: calc(var(--scale) * 0.4);
+
+        border-top:    var(--border) var(--btn-border-light);
+        border-left:   var(--border) var(--btn-border-light);
+        border-right:  var(--border) var(--btn-border-dark);
+        border-bottom: var(--border) var(--btn-border-dark);
+
+        > img{
+            width: 7vw;
+            object-fit: contain;
+            padding: calc(var(--scale) * 0.5);
+            image-rendering: pixelated;
+        }
+
+        > div{
+            display: flex;
+            flex-direction: column;
+            gap: calc(var(--scale) * 0.3);
+            padding: calc(var(--scale) * 0.5);
+
+            > div{
+                display: flex;
+                flex-direction: row;
+                gap: calc(var(--scale) * 0.5);
+
+                p{
+                    color: var(--subtekst);
+                }
+            }
+        }
+    }
+
+    /* Wereld geselecteerd */
+    input[type="radio"]{
+        display: none;
+    }
+
+    .wereld:has(input:checked){
+        background: var(--btn-hover-bg);
+        border-top-color:    var(--btn-active-light);
+        border-left-color:   var(--btn-active-light);
+        border-right-color:  var(--btn-active-dark);
+        border-bottom-color: var(--btn-active-dark);
+    }
+}

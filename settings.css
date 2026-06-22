@@ -1,0 +1,104 @@
+/* --------------------------------------------------------------------------------- MARK: LAYOUT
+*/
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    gap: calc(var(--scale) * 2);
+}
+
+/* --------------------------------------------------------------------------------- MARK: TITEL
+*/
+
+h1{
+    font-family: 'Minecraft Heading', sans-serif;
+    font-size: calc(var(--scale) * 3);
+    color: var(--white);
+
+    text-shadow:
+        2px 2px 0px var(--gray),
+        4px 4px 0px var(--dark-gray);
+}
+
+/* --------------------------------------------------------------------------------- MARK: KNOPPEN GRID
+*/
+
+.settings-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: calc(var(--scale) * 0.7);
+
+    width: 50vw;
+}
+
+/* Actief thema knop heeft andere kleur */
+.btn.active-theme{
+    background-color: var(--btn-hover-bg);
+    border-top-color:    var(--btn-hover-light);
+    border-left-color:   var(--btn-hover-light);
+    border-right-color:  var(--btn-hover-dark);
+    border-bottom-color: var(--btn-hover-dark);
+}
+
+/* --------------------------------------------------------------------------------- MARK: THEMA KAARTEN
+*/
+
+.theme-card{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: calc(var(--scale) * 0.4);
+
+    background: none;
+    cursor: pointer;
+
+    border-top:    var(--border) var(--btn-border-light);
+    border-left:   var(--border) var(--btn-border-light);
+    border-right:  var(--border) var(--btn-border-dark);
+    border-bottom: var(--border) var(--btn-border-dark);
+
+    padding: calc(var(--scale) * 0.5);
+}
+
+.theme-thumb{
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    image-rendering: pixelated;
+
+    border: calc(var(--scale) * 0.15) solid var(--black);
+}
+
+.theme-card span{
+    font-family: 'Minecraft Text', sans-serif;
+    font-size: calc(var(--scale) * 1.1);
+    color: var(--white);
+}
+
+.theme-card:hover{
+    background-color: var(--btn-hover-bg);
+    border-top-color:    var(--btn-hover-light);
+    border-left-color:   var(--btn-hover-light);
+    border-right-color:  var(--btn-hover-dark);
+    border-bottom-color: var(--btn-hover-dark);
+}
+
+.theme-card.active-theme{
+    background-color: var(--btn-hover-bg);
+    border-top-color:    var(--btn-active-light);
+    border-left-color:   var(--btn-active-light);
+    border-right-color:  var(--btn-active-dark);
+    border-bottom-color: var(--btn-active-dark);
+}
+
+/* --------------------------------------------------------------------------------- MARK: KLAAR KNOP
+*/
+
+.btn-done{
+    width: 38vw;
+    padding: calc(var(--scale) * 0.85) 0;
+}
