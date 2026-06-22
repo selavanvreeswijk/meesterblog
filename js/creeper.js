@@ -38,10 +38,10 @@ function quitGame() {
             });
         });
 
-        // Navigeer nadat het geluid klaar is, of na 2s als fallback
+        // Navigeer nadat het geluid klaar is, of na 1s als fallback
         const goToQuit = () => { window.location.href = 'quit.html'; };
         audio.addEventListener('ended', goToQuit);
-        setTimeout(goToQuit, 3000);
+        setTimeout(goToQuit, 1000);
 
     }, 2000);
 }

@@ -19,7 +19,6 @@ list.addEventListener("scroll", () => {
 });
 
 // Op wereld klikken en openen
-
 const radios = document.querySelectorAll("input[name='wereld']");
 const openBtn = document.getElementById("open-btn");
 

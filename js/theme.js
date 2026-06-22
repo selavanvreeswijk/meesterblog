@@ -7,13 +7,9 @@ function setTheme(theme) {
 }
 
 function updateThemeButtons(theme) {
-    const btnStandaard = document.getElementById('btn-standaard');
-    const btnUnderworld = document.getElementById('btn-underworld');
-
-    if (!btnStandaard || !btnUnderworld) return;
-
-    btnStandaard.classList.toggle('active-theme', theme !== 'underworld');
-    btnUnderworld.classList.toggle('active-theme', theme === 'underworld');
+    document.querySelectorAll('.theme-card').forEach(card => {
+        card.classList.toggle('active-theme', card.dataset.theme === theme);
+    });
 }
 
 // Actieve staat bijwerken op inladen
