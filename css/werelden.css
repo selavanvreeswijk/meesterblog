@@ -22,7 +22,7 @@ body{
     color: var(--white);
 }
 
-/* --------------------------------------------------------------------------------- MARK: TAB HEADER (transparant - zweeft in de lucht)
+/* --------------------------------------------------------------------------------- MARK: TAB HEADER
 */
 
 .panel-header{
@@ -37,7 +37,6 @@ body{
         flex-direction: row;
         align-items: center;
 
-        /* Geen achtergrond, geen border - zweeft over de achtergrond */
         img{
             display: none;
         }
@@ -151,10 +150,10 @@ main{
         cursor: pointer;
         margin-bottom: calc(var(--scale) * 0.4);
 
-        border-top:    var(--border) #373737;
-        border-left:   var(--border) #373737;
-        border-right:  var(--border) #212121;
-        border-bottom: var(--border) #212121;
+        border-top:    var(--border) var(--btn-border-light);
+        border-left:   var(--border) var(--btn-border-light);
+        border-right:  var(--border) var(--btn-border-dark);
+        border-bottom: var(--border) var(--btn-border-dark);
 
         > img{
             width: 7vw;
@@ -187,7 +186,10 @@ main{
     }
 
     .wereld:has(input:checked){
-        background: #7a7aaa;
-        border-color: #aaaaff;
+        background: var(--btn-hover-bg);
+        border-top-color:    var(--btn-active-light);
+        border-left-color:   var(--btn-active-light);
+        border-right-color:  var(--btn-active-dark);
+        border-bottom-color: var(--btn-active-dark);
     }
 }

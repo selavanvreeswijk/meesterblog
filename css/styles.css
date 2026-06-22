@@ -54,7 +54,8 @@
 /* --------------------------------------------------------------------------------- MARK: NETHER THEMA
 */
 
-/* Achtergrond gegenereerd met AI. Prompt: een nether/underworld biome achtergrond voor mijn minecraft portfolio in pixelart stijl, rood en oranje lava tinten */
+/* Achtergrond gegenereerd met AI. 
+Prompt: een thema achtergrond voor mijn minecraft portfolio in pixelart stijl, rood en oranje lava tinten */
 [data-theme="underworld"]{
     --gray: #6b2222;
     --gray-basic: #7a2a2a;
@@ -75,6 +76,81 @@
     --btn-hover-dark: #550000;
     --btn-active-light: #ff7744;
     --btn-active-dark: #661100;
+}
+
+/* --------------------------------------------------------------------------------- MARK: JUNGLE THEMA
+*/
+
+[data-theme="jungle"]{
+    --gray: #2d4a2d;
+    --gray-basic: #3a5a3a;
+    --light-gray: #8fc78f;
+    --another-dark-gray: #1f331f;
+    --dark-gray: #142214;
+    --black: #0a140a;
+    --white: #e8ffe0;
+    --subtekst: #6a9a6a;
+
+    --bg-image: url('../images/background-jungle.png');
+    --panel-bg: rgba(10, 25, 10, 0.85);
+
+    --btn-border-light: #6fae4f;
+    --btn-border-dark: #1f3a1a;
+    --btn-hover-bg: #4caf50;
+    --btn-hover-light: #7ed957;
+    --btn-hover-dark: #2e7031;
+    --btn-active-light: #9be88a;
+    --btn-active-dark: #245c27;
+}
+
+/* --------------------------------------------------------------------------------- MARK: DESERT THEMA
+*/
+
+[data-theme="desert"]{
+    --gray: #8a6a3d;
+    --gray-basic: #a3823f;
+    --light-gray: #e6c98a;
+    --another-dark-gray: #5c4626;
+    --dark-gray: #3d2e18;
+    --black: #211608;
+    --white: #fff3d6;
+    --subtekst: #c2a064;
+
+    --bg-image: url('../images/background-desert.png');
+    --panel-bg: rgba(60, 40, 10, 0.8);
+
+    --btn-border-light: #e0b35c;
+    --btn-border-dark: #6b4a1f;
+    --btn-hover-bg: #d99a2b;
+    --btn-hover-light: #f0c060;
+    --btn-hover-dark: #8a5d18;
+    --btn-active-light: #f5d27a;
+    --btn-active-dark: #79530f;
+}
+
+/* --------------------------------------------------------------------------------- MARK: ICELAND THEMA
+*/
+
+[data-theme="iceland"]{
+    --gray: #5d7e96;
+    --gray-basic: #6f93ab;
+    --light-gray: #cfe8f5;
+    --another-dark-gray: #3a5468;
+    --dark-gray: #243748;
+    --black: #121d26;
+    --white: #f0fbff;
+    --subtekst: #9cc4d8;
+
+    --bg-image: url('../images/background-iceland.png');
+    --panel-bg: rgba(15, 35, 50, 0.8);
+
+    --btn-border-light: #aee0f5;
+    --btn-border-dark: #2f5266;
+    --btn-hover-bg: #4fb8e0;
+    --btn-hover-light: #8fe0f7;
+    --btn-hover-dark: #1f6e8c;
+    --btn-active-light: #b8ecff;
+    --btn-active-dark: #2d7d99;
 }
 
 /* --------------------------------------------------------------------------------- MARK: BODY

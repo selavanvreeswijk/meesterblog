@@ -53,7 +53,11 @@ body{
         margin-top: calc(var(--scale) * 0.7);
     }
 
-    .btn-row > .btn{
+    .btn-row > a{
+        width: 18.4vw;
+    }
+
+    .btn-row .btn{
         width: 18.4vw;
     }
 
@@ -151,7 +155,6 @@ body{
     }
 }
 
-/* Skin staat rechts van de knoppen */
 .sela-bounce{
     position: absolute;
     right: 5vw;
@@ -159,6 +162,7 @@ body{
 
     width: calc(var(--scale) * 9);
     image-rendering: pixelated;
+    cursor: pointer;
 
     animation: bounceRotate 1.5s ease-in-out infinite;
 }

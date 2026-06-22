@@ -7,7 +7,7 @@ body{
     position: relative;
 }
 
-/* Donkere rode overlay over de achtergrond */
+/* Donkere rode overlay */
 body::before{
     content: '';
     position: absolute;

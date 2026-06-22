@@ -22,7 +22,7 @@ body{
     color: var(--white);
 }
 
-/* --------------------------------------------------------------------------------- MARK: TAB HEADER (transparant - zweeft in de lucht)
+/* --------------------------------------------------------------------------------- MARK: TAB HEADER
 */
 
 .panel-header{
@@ -38,7 +38,6 @@ body{
         flex-direction: row;
         align-items: center;
 
-        /* Geen achtergrond, geen border - zweeft over de achtergrond */
         img{
             display: none;
         }
@@ -54,7 +53,7 @@ body{
         }
     }
 
-    /* Sluit knop rechts (kruisje) */
+    /* Kruisje */
     .panel-close{
         display: flex;
         align-items: center;
@@ -123,7 +122,7 @@ main{
 
     padding: calc(var(--scale) * 1.5);
 
-    /* Project titel in Minecraft Heading stijl */
+    /* Projecttitel */
     h1{
         font-family: 'Minecraft Heading', sans-serif;
         font-size: calc(var(--scale) * 2.8);
